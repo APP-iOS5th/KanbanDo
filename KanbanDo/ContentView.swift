@@ -8,29 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var projectService: ProjectService = ProjectService()
-    
-    @State private var isNewNotePresented = false
-    
     var body: some View {
-        NavigationStack {
-            VStack {
-                
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        isNewNotePresented.toggle()
-                    } label: {
-                        Image(systemName: "plus")
-                            .font(.headline)
-                    }
-                }
-            }
-            
-            .sheet(isPresented: $isNewNotePresented) {
-                CreateProjectView(projectService: projectService)
-            }
+        VStack {
+            AuthenticationView()
         }
     }
 }

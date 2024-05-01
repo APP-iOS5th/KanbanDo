@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum Action {
+    case append
+    case remove
+}
+
 // FireStore에 저장할 데이터 Model
 struct Project: Identifiable, Codable, Hashable  {
     /**

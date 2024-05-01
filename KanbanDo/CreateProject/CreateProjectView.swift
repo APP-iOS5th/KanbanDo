@@ -13,9 +13,10 @@ struct CreateProjectView: View {
     @State private var startDate: Date = Date()
     @State private var endDate: Date = Date()
     @State private var calendarId: Int = 0
+    
     @Environment(\.dismiss) var dismiss
     
-    var projectService: ProjectService?
+    var projectViewModel: ProjectViewModel?
     
     var body: some View {
         NavigationStack {
@@ -41,7 +42,6 @@ struct CreateProjectView: View {
                         }
                 }
                 Section("인원") {
-                    
                 }
             }
             .navigationTitle("새 프로젝트")
@@ -49,7 +49,7 @@ struct CreateProjectView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        projectService?.addProject(title: title, description: description,
+                        projectViewModel?.addProject(title: title, description: description,
                                                    startDate: startDate, endDate: endDate, participants: ["A"])
                         dismiss()
                     } label: {
