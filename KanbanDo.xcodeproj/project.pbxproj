@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB53F2832BE14A9200CED0BD /* DetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53F2822BE14A9200CED0BD /* DetailPageView.swift */; };
+		EB9BA7112BE1C1A900D91999 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB9BA7102BE1C1A900D91999 /* GoogleService-Info.plist */; };
+		EB9BA7142BE1C21100D91999 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EB9BA7132BE1C21100D91999 /* FirebaseFirestore */; };
+		EB9BA7162BE1C21100D91999 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB9BA7152BE1C21100D91999 /* FirebaseFirestoreSwift */; };
+		EB9BA73C2BE2043E00D91999 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BA73B2BE2043E00D91999 /* Task.swift */; };
 		EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */; };
 		EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7803D2BE0E26B009270F6 /* ContentView.swift */; };
 		EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE7803F2BE0E26C009270F6 /* Assets.xcassets */; };
@@ -14,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB53F2822BE14A9200CED0BD /* DetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageView.swift; sourceTree = "<group>"; };
+		EB9BA7102BE1C1A900D91999 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB9BA73B2BE2043E00D91999 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		EBE780382BE0E26B009270F6 /* KanbanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanbanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanDoApp.swift; sourceTree = "<group>"; };
 		EBE7803D2BE0E26B009270F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9BA7142BE1C21100D91999 /* FirebaseFirestore in Frameworks */,
+				EB9BA7162BE1C21100D91999 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +63,9 @@
 			children = (
 				EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */,
 				EBE7803D2BE0E26B009270F6 /* ContentView.swift */,
+				EB53F2822BE14A9200CED0BD /* DetailPageView.swift */,
+				EB9BA73B2BE2043E00D91999 /* Task.swift */,
+				EB9BA7102BE1C1A900D91999 /* GoogleService-Info.plist */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
 				EBE780412BE0E26C009270F6 /* Preview Content */,
 			);
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = KanbanDo;
+			packageProductDependencies = (
+				EB9BA7132BE1C21100D91999 /* FirebaseFirestore */,
+				EB9BA7152BE1C21100D91999 /* FirebaseFirestoreSwift */,
+			);
 			productName = KanbanDo;
 			productReference = EBE780382BE0E26B009270F6 /* KanbanDo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = EBE7802F2BE0E26B009270F6;
+			packageReferences = (
+				EB9BA7122BE1C21100D91999 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EBE780392BE0E26B009270F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +147,7 @@
 			files = (
 				EBE780432BE0E26C009270F6 /* Preview Assets.xcassets in Resources */,
 				EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */,
+				EB9BA7112BE1C1A900D91999 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB53F2832BE14A9200CED0BD /* DetailPageView.swift in Sources */,
+				EB9BA73C2BE2043E00D91999 /* Task.swift in Sources */,
 				EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */,
 				EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */,
 			);
@@ -342,6 +365,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB9BA7122BE1C21100D91999 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB9BA7132BE1C21100D91999 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9BA7122BE1C21100D91999 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EB9BA7152BE1C21100D91999 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9BA7122BE1C21100D91999 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBE780302BE0E26B009270F6 /* Project object */;
 }
