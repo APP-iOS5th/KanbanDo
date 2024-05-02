@@ -114,7 +114,7 @@ struct TaskAddView: View {
     }
     
     func addTask(_ title: String, _ text: String, _ personCharge: String, color: Color) {
-        let task = Task(color: color, title: title, text: text, deadline: Date(), personCharge: personCharge)
+        let task = ProjectTask(color: color, title: title, text: text, deadline: Date(), personCharge: personCharge)
         modelContext.insert(task)
     }
     
@@ -122,5 +122,5 @@ struct TaskAddView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Task.self, inMemory: true)
+        .modelContainer(for: ProjectTask.self, inMemory: true)
 }

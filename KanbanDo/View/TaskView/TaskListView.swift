@@ -13,7 +13,7 @@ import SwiftData
 struct TaskListView: View {
     @State var showSheet = false
     @Environment(\.modelContext) var modelContext
-    @Query(sort: \Task.text) var tasks: [Task]
+    @Query(sort: \ProjectTask.text) var tasks: [ProjectTask]
     
     //마감일 출력 양식
     var dateFormatter: DateFormatter {

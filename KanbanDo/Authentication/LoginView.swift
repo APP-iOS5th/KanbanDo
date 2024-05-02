@@ -21,7 +21,7 @@ struct LoginView: View {
             case .busy:
                 ProgressView()
             case .signedIn:
-                ProjectListView()
+                TempView()
             case .signedOut:
                 VStack {
                     Text("로그인")

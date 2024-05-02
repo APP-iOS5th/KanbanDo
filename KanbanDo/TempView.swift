@@ -16,8 +16,7 @@ struct TempView: View {
     var body: some View {
         NavigationStack {
             List(projectViewModel.projects) { project in
-                Button {
-                } label: {
+                NavigationLink(destination: MainTabView(project: project)) {
                     Text(project.title)
                 }
             }
@@ -37,11 +36,12 @@ struct TempView: View {
             .task {
                 projectViewModel.fetchProjects()
             }
+            Button("Logout") {
+                authenticationViewModel.logout()
+            }
         }
         
-        Button("Logout") {
-            authenticationViewModel.logout()
-        }
+
     }
 }
 

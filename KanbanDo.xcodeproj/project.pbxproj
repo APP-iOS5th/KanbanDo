@@ -11,6 +11,12 @@
 		019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A792BE37C9B00809DB1 /* TaskAddView.swift */; };
 		019B5A7D2BE37CF600809DB1 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7C2BE37CF600809DB1 /* TaskListView.swift */; };
 		019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */; };
+		04572D082BE3845E002BBDC9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572D072BE3845E002BBDC9 /* MainTabView.swift */; };
+		04572D0A2BE38464002BBDC9 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572D092BE38464002BBDC9 /* MyPageView.swift */; };
+		04572D0C2BE3846A002BBDC9 /* StatusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572D0B2BE3846A002BBDC9 /* StatusTabView.swift */; };
+		04572D0F2BE38479002BBDC9 /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572D0D2BE38479002BBDC9 /* TabComponent.swift */; };
+		04572D122BE38482002BBDC9 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572D102BE38482002BBDC9 /* MockData.swift */; };
+		04572D142BE3858E002BBDC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04572D132BE3858E002BBDC9 /* GoogleService-Info.plist */; };
 		79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */; };
 		79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */; };
 		C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */; };
@@ -38,6 +44,12 @@
 		019B5A792BE37C9B00809DB1 /* TaskAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
 		019B5A7C2BE37CF600809DB1 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		04572D072BE3845E002BBDC9 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = KanbanDo/View/MainTabView.swift; sourceTree = SOURCE_ROOT; };
+		04572D092BE38464002BBDC9 /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageView.swift; path = KanbanDo/View/MyPageView.swift; sourceTree = SOURCE_ROOT; };
+		04572D0B2BE3846A002BBDC9 /* StatusTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTabView.swift; path = KanbanDo/View/StatusTabView.swift; sourceTree = SOURCE_ROOT; };
+		04572D0D2BE38479002BBDC9 /* TabComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
+		04572D102BE38482002BBDC9 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		04572D132BE3858E002BBDC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListItem.swift; sourceTree = "<group>"; };
 		C2394C0C2BE31E560060058D /* KanbanDo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanDo.entitlements; sourceTree = "<group>"; };
@@ -88,9 +100,37 @@
 		019B5A802BE37DCD00809DB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04572D062BE38433002BBDC9 /* MainTabView */,
 				019B5A752BE37C2F00809DB1 /* TaskView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04572D062BE38433002BBDC9 /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				04572D092BE38464002BBDC9 /* MyPageView.swift */,
+				04572D072BE3845E002BBDC9 /* MainTabView.swift */,
+				04572D0B2BE3846A002BBDC9 /* StatusTabView.swift */,
+			);
+			name = MainTabView;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		04572D0E2BE38479002BBDC9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04572D0D2BE38479002BBDC9 /* TabComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04572D112BE38482002BBDC9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				04572D102BE38482002BBDC9 /* MockData.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		79EB8F1B2BE3550F00CED2CC /* ProjectList */ = {
@@ -150,18 +190,21 @@
 		EBE7803A2BE0E26B009270F6 /* KanbanDo */ = {
 			isa = PBXGroup;
 			children = (
-				79EB8F1B2BE3550F00CED2CC /* ProjectList */,
 				C2394C0C2BE31E560060058D /* KanbanDo.entitlements */,
 				C2619A262BE135DE00D6AEC2 /* Info.plist */,
 				EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */,
 				EBE7803D2BE0E26B009270F6 /* ContentView.swift */,
 				C284DEBC2BE205AC0033FDB9 /* TempView.swift */,
+				79EB8F1B2BE3550F00CED2CC /* ProjectList */,
+				04572D112BE38482002BBDC9 /* Mock */,
+				04572D0E2BE38479002BBDC9 /* Components */,
 				C284DEB52BE1FA2E0033FDB9 /* Authentication */,
 				C2619A162BE1210B00D6AEC2 /* CreateProject */,
 				C284DEBE2BE20B6A0033FDB9 /* Project */,
 				019B5A802BE37DCD00809DB1 /* View */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
 				EBE780412BE0E26C009270F6 /* Preview Content */,
+				04572D132BE3858E002BBDC9 /* GoogleService-Info.plist */,
 			);
 			path = KanbanDo;
 			sourceTree = "<group>";
@@ -246,6 +289,7 @@
 			files = (
 				EBE780432BE0E26C009270F6 /* Preview Assets.xcassets in Resources */,
 				EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */,
+				04572D142BE3858E002BBDC9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +309,19 @@
 				C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */,
 				C284DEBB2BE1FDA40033FDB9 /* LoginView.swift in Sources */,
 				C284DEC02BE21B330033FDB9 /* User.swift in Sources */,
+				04572D122BE38482002BBDC9 /* MockData.swift in Sources */,
 				EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */,
 				79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */,
+				04572D082BE3845E002BBDC9 /* MainTabView.swift in Sources */,
 				79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */,
 				019B5A7D2BE37CF600809DB1 /* TaskListView.swift in Sources */,
 				C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */,
 				EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */,
+				04572D0C2BE3846A002BBDC9 /* StatusTabView.swift in Sources */,
 				019B5A772BE37C7100809DB1 /* Task.swift in Sources */,
 				C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */,
+				04572D0F2BE38479002BBDC9 /* TabComponent.swift in Sources */,
+				04572D0A2BE38464002BBDC9 /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import SwiftUI
 
 //실습 내용 중 ColorMemo 참고해 작성 중
 @Model
-class Task {
+class ProjectTask {
     var id = UUID()
     var colorHex: String
     
@@ -26,7 +26,7 @@ class Task {
     }
     
     init(color: Color, title: String, text: String, deadline: Date, personCharge: String) {
-        self.colorHex = Task.hexStringFormColor(color: color)
+        self.colorHex = ProjectTask.hexStringFormColor(color: color)
         
         self.title = title
         self.text = text
