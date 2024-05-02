@@ -14,7 +14,6 @@
 		0459B4D72BE3F29900288A45 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4D42BE3F29900288A45 /* MyPageView.swift */; };
 		0459B4D82BE3F29900288A45 /* StatusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4D52BE3F29900288A45 /* StatusTabView.swift */; };
 		0459B4D92BE3F29900288A45 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4D62BE3F29900288A45 /* MainTabView.swift */; };
-		0459B4DC2BE3F2A600288A45 /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4DA2BE3F2A600288A45 /* TabComponent.swift */; };
 		0459B4DF2BE3F2AB00288A45 /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */; };
 		0459B4E22BE3F2B900288A45 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4E02BE3F2B900288A45 /* MockData.swift */; };
 		79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */; };
@@ -48,7 +47,6 @@
 		0459B4D42BE3F29900288A45 /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageView.swift; path = ../../../../CanvanBoard/CanvanBoard/View/MyPageView.swift; sourceTree = "<group>"; };
 		0459B4D52BE3F29900288A45 /* StatusTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTabView.swift; path = ../../../../CanvanBoard/CanvanBoard/View/StatusTabView.swift; sourceTree = "<group>"; };
 		0459B4D62BE3F29900288A45 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = ../../../../CanvanBoard/CanvanBoard/View/MainTabView.swift; sourceTree = "<group>"; };
-		0459B4DA2BE3F2A600288A45 /* TabComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
 		0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
 		0459B4E02BE3F2B900288A45 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -118,15 +116,6 @@
 			path = MainTabView;
 			sourceTree = "<group>";
 		};
-		0459B4DB2BE3F2A600288A45 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				0459B4DA2BE3F2A600288A45 /* TabComponent.swift */,
-			);
-			name = Components;
-			path = ../../../CanvanBoard/CanvanBoard/Components;
-			sourceTree = "<group>";
-		};
 		0459B4DD2BE3F2AB00288A45 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +166,6 @@
 		C284DEBE2BE20B6A0033FDB9 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				0459B4DB2BE3F2A600288A45 /* Components */,
 				C2619A1B2BE132C100D6AEC2 /* Project.swift */,
 				C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */,
 			);
@@ -334,7 +322,6 @@
 				019B5A772BE37C7100809DB1 /* Task.swift in Sources */,
 				C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */,
 				0459B4DF2BE3F2AB00288A45 /* TabComponent.swift in Sources */,
-				0459B4DC2BE3F2A600288A45 /* TabComponent.swift in Sources */,
 				0459B4D92BE3F29900288A45 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
