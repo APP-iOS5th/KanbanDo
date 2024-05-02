@@ -101,6 +101,9 @@ struct taskAddView: View {
     
     @Environment(\.modelContext) var modelContext
     
+    //dlwjs
+    @Environment(\.dismiss) var dismiss
+    
 //    @Binding var showSheet: Bool
     @State var taskTitle: String = ""
     @State var taskText: String = ""
@@ -173,22 +176,25 @@ struct taskAddView: View {
                 }
                 
                 //todo: 위치/모양 바꾸기
-                NavigationLink {
-                    ContentView()
+               Button {
+                   dismiss()
+                   addTask(taskTitle, taskText, taskPersonCharge, color: taskStatus)
+                   
                 } label: {
                     HStack {
-                        Image(systemName: "Checkmark")
-                        Text("완료")
+                        Image(systemName: "checkmark")
+                        Text("추가하기")
                     }
                 }
+                .disabled(taskTitle.isEmpty)
+                .disabled(taskText.isEmpty)
             }
-        
-            Button("완료") {
-                addTask(taskTitle, taskText, taskPersonCharge, color: taskStatus)
-            }
-            .disabled(taskTitle.isEmpty)
-            .disabled(taskText.isEmpty)
-            //.disabled(taskPersonCharge.isEmpty)
+
+//            Button("태스크 추가") {
+//                
+//            }
+//            .disabled(taskTitle.isEmpty)
+//            .disabled(taskText.isEmpty)
         }
         .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
         .scrollIndicators(.hidden, axes: .vertical)
