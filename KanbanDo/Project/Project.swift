@@ -12,7 +12,7 @@ enum Action {
     case remove
 }
 
-// FireStore에 저장할 데이터 Model
+// FireStore에 저장할 Project Model
 struct Project: Identifiable, Codable, Hashable  {
     /**
      id: 프로젝트 고유 식별자
@@ -27,5 +27,5 @@ struct Project: Identifiable, Codable, Hashable  {
     let description: String
     let startDate: Date
     let endDate: Date
-    let participants: [String]
+    let participants: [User]
 }

@@ -31,12 +31,11 @@ struct TempView: View {
                     }
                 }
             }
-            
-            .sheet(isPresented: $isNewNotePresented) {
+            .fullScreenCover(isPresented: $isNewNotePresented) {
                 CreateProjectView(projectViewModel: projectViewModel)
             }
             .task {
-                projectViewModel.fetch()
+                projectViewModel.fetchProjects()
             }
         }
         

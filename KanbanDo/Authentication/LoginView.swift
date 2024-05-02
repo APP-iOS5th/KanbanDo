@@ -8,7 +8,10 @@
 import SwiftUI
 import GoogleSignInSwift
 
-struct AuthenticationView: View {
+/**
+    로그인 화면
+ */
+struct LoginView: View {
     var authenticationViewModel = AuthenticationViewModel.shared
     
     var body: some View {
@@ -39,5 +42,5 @@ struct AuthenticationView: View {
 }
 
 #Preview {
-    AuthenticationView()
+    LoginView()
 }
