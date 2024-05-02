@@ -11,6 +11,7 @@ struct ProjectListView: View {
     
     //MARK: - property
     @StateObject private var viewModel = ProjectViewModel()
+    @State private var isPressedCreateBtn = false
     
     var body: some View {
         NavigationStack{
@@ -22,18 +23,14 @@ struct ProjectListView: View {
                             ProjectListItem(project: project)
                         }
                     }//: LOOP
-                    //디테일 뷰로 이동
-                    .navigationDestination(for: Project.self) { project in
-                        DetailView(project: project)
-                    }
 
                     //프로젝트 생성
-                    NavigationLink {
+                    Button {
                         // TODO: 프로젝트 생성 뷰
-                        CreateView()
+                        isPressedCreateBtn.toggle()
                     } label: {
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(height: 150)
+                            .frame(height: 50)
                             .foregroundStyle(.gray.opacity(0.3))
                             .overlay{
                                 Image(systemName: "plus")
@@ -44,9 +41,18 @@ struct ProjectListView: View {
                 }//: LazyVStack
                 .padding(.horizontal)
                 .buttonStyle(PlainButtonStyle())
+                //디테일 뷰로 이동
+                .navigationDestination(for: Project.self) { project in
+                    DetailView(project: project)
+                }
             }//: SCROLLVIEW
             .navigationTitle("칸반도")
+            .navigationBarTitleDisplayMode(.inline)
         }//: NAVIGATIONSTACK
+        .fullScreenCover(isPresented: $isPressedCreateBtn, content: {
+            //프로젝트 생성 뷰
+            CreateView()
+        })
     }
 }
 
@@ -80,8 +86,23 @@ struct ProjectListView: View {
  }
 
  struct CreateView: View {
+     //MARK: - property
+     @Environment(\.dismiss) private var dismiss
+
      var body: some View {
-         Text("프로젝트 생성 뷰 입니다.")
+         VStack{
+             Text("프로젝트 생성 뷰 입니다.")
+             Button {
+                 dismiss()
+             } label: {
+                 RoundedRectangle(cornerRadius: 10)
+                     .stroke(.gray, lineWidth: 2)
+                     .frame(width: 150, height: 50)
+                     .overlay{
+                         Text("닫기")
+                     }
+             }
+         }
      }
  }
     
