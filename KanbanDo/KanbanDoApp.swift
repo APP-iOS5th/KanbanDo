@@ -26,7 +26,7 @@ struct KanbanDoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ProjectListView()
+            LoginView()
         }
     }
 }

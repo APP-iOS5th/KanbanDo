@@ -10,7 +10,7 @@ import SwiftUI
 struct ProjectListView: View {
     
     //MARK: - property
-    @StateObject private var viewModel = ProjectViewModel()
+    @StateObject private var viewModel = TempProjectViewModel()
     @State private var isPressedCreateBtn = false
     
     var body: some View {
@@ -68,7 +68,7 @@ struct ProjectListView: View {
 
 
 //임시 프로젝트 Model
-struct Project: Identifiable, Hashable, Codable{
+struct TempProject: Identifiable, Hashable, Codable{
     var id: String
     var title: String //제목
     var content: String //내용
@@ -80,14 +80,14 @@ struct Project: Identifiable, Hashable, Codable{
  }
 
  //임시 ViewModel
- class ProjectViewModel: ObservableObject{
-     @Published var projects: [Project] = [Project(id: UUID().uuidString, title: "목록 만들기0", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                           Project(id: UUID().uuidString, title: "목록 만들기1", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                           Project(id: UUID().uuidString, title: "목록 만들기2", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                           Project(id: UUID().uuidString, title: "목록 만들기3", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                           Project(id: UUID().uuidString, title: "목록 만들기4", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                           Project(id: UUID().uuidString, title: "목록 만들기5", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                           Project(id: UUID().uuidString, title: "목록 만들기6", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2)]
+ class TempProjectViewModel: ObservableObject{
+     @Published var projects: [TempProject] = [TempProject(id: UUID().uuidString, title: "목록 만들기0", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                               TempProject(id: UUID().uuidString, title: "목록 만들기1", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                               TempProject(id: UUID().uuidString, title: "목록 만들기2", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                               TempProject(id: UUID().uuidString, title: "목록 만들기3", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                               TempProject(id: UUID().uuidString, title: "목록 만들기4", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                               TempProject(id: UUID().uuidString, title: "목록 만들기5", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                               TempProject(id: UUID().uuidString, title: "목록 만들기6", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2)]
      //    @Published var projects = [Project]()
      //
      //    init(){

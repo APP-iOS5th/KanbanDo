@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProjectListItem: View {
-     var project: Project
+     var project: TempProject
 
      var body: some View {
          VStack(alignment: .leading){
@@ -31,10 +31,6 @@ struct ProjectListItem: View {
                  Text("\(project.startDate.formatted())")
                  Text("~")
                  Text("\(project.enddate.formatted())")
-
-                 Spacer()
-
-                 Text("참여인원 : \(project.paricipants)")
              }//: HSTACK
          }//: VSTACK
          .font(.caption)
@@ -51,5 +47,5 @@ struct ProjectListItem: View {
  }
 
 #Preview {
-    ProjectListItem(project: ProjectViewModel().projects[0])
+    ProjectListItem(project: TempProjectViewModel().projects[0])
 }
