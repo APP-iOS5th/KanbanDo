@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04572CF62BE37B0E002BBDC9 /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572CF42BE37B0E002BBDC9 /* TabComponent.swift */; };
+		04572CFE2BE37B36002BBDC9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572CFA2BE37B36002BBDC9 /* MainTabView.swift */; };
+		04572CFF2BE37B36002BBDC9 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572CFB2BE37B36002BBDC9 /* MyPageView.swift */; };
+		04572D002BE37B36002BBDC9 /* StatusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572CFC2BE37B36002BBDC9 /* StatusTabView.swift */; };
+		04572D032BE37B62002BBDC9 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572D012BE37B61002BBDC9 /* MockData.swift */; };
+		04572D052BE37BE9002BBDC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04572D042BE37BE9002BBDC9 /* GoogleService-Info.plist */; };
 		C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */; };
 		C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A1B2BE132C100D6AEC2 /* Project.swift */; };
 		C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */; };
 		C2619A212BE1349200D6AEC2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C2619A202BE1349200D6AEC2 /* FirebaseFirestore */; };
 		C2619A232BE1349200D6AEC2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2619A222BE1349200D6AEC2 /* FirebaseFirestoreSwift */; };
-		C284DEAF2BE1F94A0033FDB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C284DEAE2BE1F94A0033FDB9 /* GoogleService-Info.plist */; };
 		C284DEB22BE1F9DA0033FDB9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C284DEB12BE1F9DA0033FDB9 /* GoogleSignIn */; };
 		C284DEB42BE1F9DA0033FDB9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C284DEB32BE1F9DA0033FDB9 /* GoogleSignInSwift */; };
 		C284DEB72BE1FA570033FDB9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEB62BE1FA570033FDB9 /* AuthenticationViewModel.swift */; };
@@ -29,12 +34,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04572CF42BE37B0E002BBDC9 /* TabComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
+		04572CFA2BE37B36002BBDC9 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		04572CFB2BE37B36002BBDC9 /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		04572CFC2BE37B36002BBDC9 /* StatusTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTabView.swift; sourceTree = "<group>"; };
+		04572D012BE37B61002BBDC9 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		04572D042BE37BE9002BBDC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2394C0C2BE31E560060058D /* KanbanDo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanDo.entitlements; sourceTree = "<group>"; };
 		C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
 		C2619A1B2BE132C100D6AEC2 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		C2619A262BE135DE00D6AEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C284DEAE2BE1F94A0033FDB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C284DEB62BE1FA570033FDB9 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C284DEBC2BE205AC0033FDB9 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
@@ -64,6 +74,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04572CF52BE37B0E002BBDC9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04572CF42BE37B0E002BBDC9 /* TabComponent.swift */,
+			);
+			name = Components;
+			path = KanbanDo/Components;
+			sourceTree = SOURCE_ROOT;
+		};
+		04572CFD2BE37B36002BBDC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04572CFA2BE37B36002BBDC9 /* MainTabView.swift */,
+				04572CFB2BE37B36002BBDC9 /* MyPageView.swift */,
+				04572CFC2BE37B36002BBDC9 /* StatusTabView.swift */,
+			);
+			name = View;
+			path = KanbanDo/View;
+			sourceTree = SOURCE_ROOT;
+		};
+		04572D022BE37B61002BBDC9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				04572D012BE37B61002BBDC9 /* MockData.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		C2619A162BE1210B00D6AEC2 /* CreateProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +155,14 @@
 				EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */,
 				EBE7803D2BE0E26B009270F6 /* ContentView.swift */,
 				C284DEBC2BE205AC0033FDB9 /* TempView.swift */,
+				04572D022BE37B61002BBDC9 /* Mock */,
+				04572CFD2BE37B36002BBDC9 /* View */,
+				04572CF52BE37B0E002BBDC9 /* Components */,
 				C284DEB52BE1FA2E0033FDB9 /* Authentication */,
 				C2619A162BE1210B00D6AEC2 /* CreateProject */,
 				C284DEBE2BE20B6A0033FDB9 /* Project */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
-				C284DEAE2BE1F94A0033FDB9 /* GoogleService-Info.plist */,
+				04572D042BE37BE9002BBDC9 /* GoogleService-Info.plist */,
 				EBE780412BE0E26C009270F6 /* Preview Content */,
 			);
 			path = KanbanDo;
@@ -206,8 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE780432BE0E26C009270F6 /* Preview Assets.xcassets in Resources */,
+				04572D052BE37BE9002BBDC9 /* GoogleService-Info.plist in Resources */,
 				EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */,
-				C284DEAF2BE1F94A0033FDB9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,13 +261,18 @@
 			files = (
 				C284DEB72BE1FA570033FDB9 /* AuthenticationViewModel.swift in Sources */,
 				C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */,
+				04572CFF2BE37B36002BBDC9 /* MyPageView.swift in Sources */,
 				C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */,
+				04572D002BE37B36002BBDC9 /* StatusTabView.swift in Sources */,
 				C284DEBD2BE205AC0033FDB9 /* TempView.swift in Sources */,
 				C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */,
 				C284DEBB2BE1FDA40033FDB9 /* LoginView.swift in Sources */,
 				C284DEC02BE21B330033FDB9 /* User.swift in Sources */,
+				04572CF62BE37B0E002BBDC9 /* TabComponent.swift in Sources */,
 				EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */,
 				C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */,
+				04572CFE2BE37B36002BBDC9 /* MainTabView.swift in Sources */,
+				04572D032BE37B62002BBDC9 /* MockData.swift in Sources */,
 				EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */,
 				C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */,
 			);
