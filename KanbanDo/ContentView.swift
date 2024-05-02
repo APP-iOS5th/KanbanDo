@@ -9,10 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            NavigationLink("상세 보기") {
-                DetailPageView()
-            }
+        VStack {
+            LoginView()
         }
     }
 }
