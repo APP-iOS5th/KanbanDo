@@ -13,9 +13,9 @@ enum Status { // task 상태
     case done // 완료
 }
 
-class Task: ObservableObject {
+class TaskList: ObservableObject { /* 클래스명 충돌로 수정 */
     var taskID = UUID()
-    var taskName: String
+    var taskName: String  // 태스크 이름
     @Published var taskDetails: String // task 설명 저장할 문자열, 변경 가능
     @Published var workStatus: Status // 상태 변경 가능
     var personCharge: [String] // 담당자
