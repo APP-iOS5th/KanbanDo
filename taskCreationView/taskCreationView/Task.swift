@@ -48,7 +48,7 @@ class Task {
     
     var title: String // 할 일 이름
     var text: String // 구체적인 할 일 내용
-    //var deadline: Date // 마감일
+    var deadline: Date // 마감일
     var personCharge: String // 담당자. 데이터 타입을 뭘로 받으면 좋을지 모르겠어서 일단 String으로
    
     //컬러값 반환
@@ -62,7 +62,7 @@ class Task {
         
         self.title = title
         self.text = text
-       // self.deadline = deadline
+        self.deadline = deadline
         self.personCharge = personCharge
     }
     

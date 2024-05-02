@@ -62,16 +62,30 @@ struct ContentView: View {
                 }
                 .listStyle(.plain)
                 .navigationTitle("Project Name")
-                Button("할 일 추가", systemImage: "plus.square.fill") {
-                    showSheet = true
+                
+                NavigationLink {
+                    taskAddView()
+                } label: {
+                    HStack {
+                        Image(systemName: "plus")
+                        Text("할 일 추가")
+                    }
+                    .frame(width: geometry.size.width * 0.9, height: 100)
+                    .background(.gray)
+                    .cornerRadius(10.0)
+                    .foregroundColor(.white)
                 }
-                .frame(width: geometry.size.width * 0.9, height: 100)
-                .background(.gray)
-                .cornerRadius(10.0)
-                .foregroundColor(.white)
-                .sheet(isPresented: $showSheet) {
-                    taskAddView(showSheet: $showSheet)
-                }
+                
+//                Button("할 일 추가", systemImage: "plus.square.fill") {
+////                    showSheet = true
+//                }
+//                .frame(width: geometry.size.width * 0.9, height: 100)
+//                .background(.gray)
+//                .cornerRadius(10.0)
+//                .foregroundColor(.white)
+//                .sheet(isPresented: $showSheet) {
+//                    taskAddView(showSheet: $showSheet)
+//                }
             }
         }
     }
@@ -82,10 +96,10 @@ struct taskAddView: View {
     
     @Environment(\.modelContext) var modelContext
     
-    @Binding var showSheet: Bool
+//    @Binding var showSheet: Bool
     @State var taskTitle: String = ""
     @State var taskText: String = ""
-    //@State var taskDeadline: Date
+    @State var taskDeadline = Date()
     @State var taskStatus: Color =  .gray
     @State var taskPersonCharge: String = ""
     
@@ -93,70 +107,84 @@ struct taskAddView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Button("뒤로가기") {
-                    showSheet = false
-                }
-                Spacer()
-                Button("완료") {
-                    addTask(taskTitle, taskText, taskPersonCharge, color: taskStatus)
-                    showSheet = false
-                }
-                .disabled(taskTitle.isEmpty)
-                .disabled(taskText.isEmpty)
-               .disabled(taskPersonCharge.isEmpty)
-            }
-            .padding()
-            
             // 상태 선택창
-            VStack(alignment: .leading) {
-                Text("상태")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                HStack {
-                    //todo: 상태 선택 버튼
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("상태")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    HStack {
+                        //todo: 상태 선택 버튼
+                    }
                 }
                 
                 Spacer()
                 
-                Text("할 일")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                TextField("할 일을 적어주세요", text: $taskTitle, axis: .vertical)
-                    .frame(width: 320)
-                    .padding()
-                    .border(Color.gray.opacity(0.4), width: 1)
-                    .cornerRadius(3.0)
+                VStack(alignment: .leading) {
+                    Text("할 일")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    TextField("할 일을 적어주세요", text: $taskTitle, axis: .vertical)
+                        .frame(width: 320, height: 30)
+                        .padding(16)
+                        .border(Color.gray.opacity(0.4), width: 1)
+                        .cornerRadius(3.0)
+                }
                 
                 Spacer()
                 
-                Text("세부 내용")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                TextField("세부 내용을 적어주세요", text: $taskText, axis: .vertical)
-                    .frame(width: 320)
-                    .padding()
-                    .border(Color.gray.opacity(0.4), width: 1)
-                    .cornerRadius(3.0)
+                VStack(alignment: .leading) {
+                    Text("세부 내용")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    TextField("세부 내용을 적어주세요", text: $taskText, axis: .vertical)
+                        .frame(width: 320, height: 30)
+                        .padding(16)
+                        .border(Color.gray.opacity(0.4), width: 1)
+                        .cornerRadius(3.0)
+                }
                 
                 Spacer()
                 
-                Text("마감일")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                //todo: 마감일 선택
+                VStack(alignment: .leading) {
+                    Text("마감일")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    //todo: 마감일 선택
+                    DatePicker("", selection: $taskDeadline, in: Date()...)
+                        .datePickerStyle(GraphicalDatePickerStyle()).labelsHidden()
+                }
                 
                 Spacer()
                 
-                
-                Text("담당자")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                //todo: 프로젝트에 포함된 사람 등록하는 기능
+                VStack(alignment: .leading) {
+                    Text("담당자")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    //todo: 프로젝트에 포함된 사람 등록하는 기능
+                }
                 
                 Spacer()
             }
+            
+            //todo: 위치/모양 바꾸기
+            NavigationLink {
+                ContentView()
+            } label: {
+                HStack {
+                    Image(systemName: "Checkmark")
+                    Text("완료")
+                }
+            }
+//            Button("완료") {
+//                addTask(taskTitle, taskText, taskPersonCharge, color: taskStatus)
+////                    showSheet = false
+//            }
+//            .disabled(taskTitle.isEmpty)
+//            .disabled(taskText.isEmpty)
+//           .disabled(taskPersonCharge.isEmpty)
         }
+        .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
     }
     
     func addTask(_ title: String, _ text: String, _ personCharge: String, color: Color) {
