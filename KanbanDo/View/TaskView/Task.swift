@@ -12,38 +12,41 @@ import SwiftUI
 @Model
 class Task {
     var id = UUID()
-    var colorHex: String
+//    var colorHex: String
     
     var title: String // 할 일 이름
-    var text: String // 구체적인 할 일 내용
-    var deadline: Date // 마감일
-    var personCharge: String // 담당자. 데이터 타입을 뭘로 받으면 좋을지 모르겠어서 일단 String으로
+    
+    //description이라는 이름 쓸 수가 없다고 에러가 떠러 얘만 좀 바꿨습니다!
+    var taskDescription: String // 구체적인 할 일 내용
+    var closingDate: Date // 마감일
+    var manager: String // 담당자. 데이터 타입을 뭘로 받으면 좋을지 모르겠어서 일단 String으로
    
     //컬러값 반환
-    @Transient
-    var color: Color {
-        return Color(hex: colorHex)
-    }
+//    @Transient
+//    var color: Color {
+//        return Color(hex: colorHex)
+//    }
     
-    init(color: Color, title: String, text: String, deadline: Date, personCharge: String) {
-        self.colorHex = Task.hexStringFormColor(color: color)
-        
+    init(title: String, taskDescription: String, closingDate: Date, manager: String) {
+        //self.colorHex = Task.hexStringFormColor(color: color)
+
         self.title = title
-        self.text = text
-        self.deadline = deadline
-        self.personCharge = personCharge
+        self.taskDescription = taskDescription
+        self.closingDate = closingDate
+        self.manager = manager
     }
     
-    static func hexStringFormColor(color: Color) -> String {
-        let components = color.resolve(in: EnvironmentValues())
-        
-        //rgb 변수 만들기
-        let r: CGFloat = CGFloat(components.red)
-        let g: CGFloat = CGFloat(components.green)
-        let b: CGFloat = CGFloat(components.blue)
-        
-        let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
-        print(hexString)
-        return hexString
-    }
+    //안쓰는 듯
+//    static func hexStringFormColor(color: Color) -> String {
+//        let components = color.resolve(in: EnvironmentValues())
+//        
+//        //rgb 변수 만들기
+//        let r: CGFloat = CGFloat(components.red)
+//        let g: CGFloat = CGFloat(components.green)
+//        let b: CGFloat = CGFloat(components.blue)
+//        
+//        let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
+//        print(hexString)
+//        return hexString
+//    }
 }

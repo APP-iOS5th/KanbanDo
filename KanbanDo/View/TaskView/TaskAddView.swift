@@ -18,13 +18,19 @@ struct TaskAddView: View {
     @Environment(\.dismiss) var dismiss
     
 //    @Binding var showSheet: Bool
-    @State var taskTitle: String = ""
-    @State var taskText: String = ""
-    @State private var taskDeadline = Date()
-    @State var taskStatus: Color =  .gray
-    @State var taskPersonCharge: String = ""
+    @State var title: String = ""
+    @State var description: String = ""
+    @State var closingDate: Date = Date()
+    @State var status: projectStatus =  .workDo
+    @State var manager: String = ""
     
-    let taskStatusGroup: [Color] = [.gray, .green, .blue]
+    enum projectStatus: String {
+            case workDo
+            case doing
+            case done
+        }
+    
+    //let taskStatusGroup: [Color] = [.gray, .green, .blue]
     
     var body: some View {
         VStack {
@@ -46,7 +52,7 @@ struct TaskAddView: View {
                         Text("할 일")
                             .font(.title3)
                             .fontWeight(.bold)
-                        TextField("할 일을 적어주세요", text: $taskTitle, axis: .vertical)
+                        TextField("할 일을 적어주세요", text: $title, axis: .vertical)
                             .frame(width: 320, height: 25)
                             .padding(16)
                             .border(Color.gray.opacity(0.4), width: 1)
@@ -59,7 +65,7 @@ struct TaskAddView: View {
                         Text("세부 내용")
                             .font(.title3)
                             .fontWeight(.bold)
-                        TextField("세부 내용을 적어주세요", text: $taskText, axis: .vertical)
+                        TextField("세부 내용을 적어주세요", text: $description, axis: .vertical)
                             .frame(width: 320, height: 100)
                             .padding(16)
                             .border(Color.gray.opacity(0.4), width: 1)
@@ -70,7 +76,7 @@ struct TaskAddView: View {
                     
                     VStack(alignment: .leading) {
                         //todo: 마감일 선택
-                        DatePicker("마감일", selection: $taskDeadline, in: Date()..., displayedComponents: .date)
+                        DatePicker("마감일", selection: $closingDate, in: Date()..., displayedComponents: .date)
                             .font(.title3)
                             .fontWeight(.bold)
                         //.datePickerStyle(GraphicalDatePickerStyle()).labelsHidden()
@@ -91,7 +97,7 @@ struct TaskAddView: View {
                 //todo: 위치/모양 바꾸기
                Button {
                    dismiss()
-                   addTask(taskTitle, taskText, taskPersonCharge, color: taskStatus)
+                   addTask(title, description, closingDate, manager)
                    
                 } label: {
                     HStack {
@@ -99,8 +105,8 @@ struct TaskAddView: View {
                         Text("추가하기")
                     }
                 }
-                .disabled(taskTitle.isEmpty)
-                .disabled(taskText.isEmpty)
+                .disabled(title.isEmpty)
+                .disabled(description.isEmpty)
             }
 
 //            Button("태스크 추가") {
@@ -113,10 +119,21 @@ struct TaskAddView: View {
         .scrollIndicators(.hidden, axes: .vertical)
     }
     
-    func addTask(_ title: String, _ text: String, _ personCharge: String, color: Color) {
-        let task = Task(color: color, title: title, text: text, deadline: Date(), personCharge: personCharge)
+//    func addTask(_ title: String, _ text: String, _ personCharge: String, color: Color) {
+//        let task = Task(color: color, title: title, text: text, deadline: Date(), personCharge: personCharge)
+//        modelContext.insert(task)
+//    }
+    
+    func addTask(_ title: String, _ description: String, _ closingDate: Date, _ manager: String) {
+        let task = Task(title: title, taskDescription: description, closingDate: Date(), manager: manager)
         modelContext.insert(task)
     }
+    
+    //        var title: String
+    //        var description: String
+    //        var status: projectStatus
+    //        var manager: String
+    //        var closingDate: Date
     
 }
 
