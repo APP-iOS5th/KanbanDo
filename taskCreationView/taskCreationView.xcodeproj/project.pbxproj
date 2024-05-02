@@ -12,6 +12,7 @@
 		BF266E7C2BE1C28D00294364 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BF266E7B2BE1C28D00294364 /* FirebaseFirestoreSwift */; };
 		BF41C8942BE327A800514F3C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = BF41C8932BE327A800514F3C /* GoogleSignIn */; };
 		BF41C8962BE327A800514F3C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BF41C8952BE327A800514F3C /* GoogleSignInSwift */; };
+		BF480BD62BE35F5400444732 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF480BD52BE35F5400444732 /* test.swift */; };
 		BFE8D4B02BE1172A002A0583 /* taskCreationViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D4AF2BE1172A002A0583 /* taskCreationViewApp.swift */; };
 		BFE8D4B22BE1172A002A0583 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D4B12BE1172A002A0583 /* ContentView.swift */; };
 		BFE8D4B42BE1172A002A0583 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D4B32BE1172A002A0583 /* Task.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		BF266E762BE1C23A00294364 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF480BD52BE35F5400444732 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		BFE8D4AC2BE1172A002A0583 /* taskCreationView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskCreationView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8D4AF2BE1172A002A0583 /* taskCreationViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskCreationViewApp.swift; sourceTree = "<group>"; };
 		BFE8D4B12BE1172A002A0583 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				BFE8D4AF2BE1172A002A0583 /* taskCreationViewApp.swift */,
 				BFE8D4B12BE1172A002A0583 /* ContentView.swift */,
+				BF480BD52BE35F5400444732 /* test.swift */,
 				BFE8D4B32BE1172A002A0583 /* Task.swift */,
 				BF266E762BE1C23A00294364 /* GoogleService-Info.plist */,
 				BFE8D4B52BE1172D002A0583 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE8D4B22BE1172A002A0583 /* ContentView.swift in Sources */,
+				BF480BD62BE35F5400444732 /* test.swift in Sources */,
 				BFE8D4B42BE1172A002A0583 /* Task.swift in Sources */,
 				BFE8D4B02BE1172A002A0583 /* taskCreationViewApp.swift in Sources */,
 			);
