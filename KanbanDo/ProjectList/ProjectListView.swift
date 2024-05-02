@@ -10,7 +10,7 @@ import SwiftUI
 struct ProjectListView: View {
     
     //MARK: - property
-    @StateObject private var viewModel = TempProjectViewModel()
+    @State private var viewModel = ProjectViewModel()
     @State private var isPressedCreateBtn = false
     
     var body: some View {
@@ -58,48 +58,27 @@ struct ProjectListView: View {
     }
 }
 
-//임시 User Model
-//struct User: Identifiable, Codable, Hashable{
-//    var id: String
-//    let url: URL? //이미지
-//    let name: String //이름
-//    let email: String //이메일
-//}
-
-
-//임시 프로젝트 Model
-struct TempProject: Identifiable, Hashable, Codable{
-    var id: String
-    var title: String //제목
-    var content: String //내용
-    var startDate: Date //시작일
-    var enddate: Date //종료일
-    var personCharge: String //담당자
-    var paricipants: Int //구성원
-//    var user: User?
- }
-
  //임시 ViewModel
- class TempProjectViewModel: ObservableObject{
-     @Published var projects: [TempProject] = [TempProject(id: UUID().uuidString, title: "목록 만들기0", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                               TempProject(id: UUID().uuidString, title: "목록 만들기1", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                               TempProject(id: UUID().uuidString, title: "목록 만들기2", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                               TempProject(id: UUID().uuidString, title: "목록 만들기3", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                               TempProject(id: UUID().uuidString, title: "목록 만들기4", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                               TempProject(id: UUID().uuidString, title: "목록 만들기5", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
-                                               TempProject(id: UUID().uuidString, title: "목록 만들기6", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2)]
-     //    @Published var projects = [Project]()
-     //
-     //    init(){
-     //        Task { try await fetchProjects() }
-     //    }
-     //
-     //    @MainActor
-     //    func fetchProjects() async throws{
-     //        self.projects = try await ProjectService.fetchProjectList()
-     //    }
-
- }
+// class TempProjectViewModel: ObservableObject{
+//     @Published var projects: [TempProject] = [TempProject(id: UUID().uuidString, title: "목록 만들기0", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+//                                               TempProject(id: UUID().uuidString, title: "목록 만들기1", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+//                                               TempProject(id: UUID().uuidString, title: "목록 만들기2", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+//                                               TempProject(id: UUID().uuidString, title: "목록 만들기3", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+//                                               TempProject(id: UUID().uuidString, title: "목록 만들기4", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+//                                               TempProject(id: UUID().uuidString, title: "목록 만들기5", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+//                                               TempProject(id: UUID().uuidString, title: "목록 만들기6", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2)]
+//     //    @Published var projects = [Project]()
+//     //
+//     //    init(){
+//     //        Task { try await fetchProjects() }
+//     //    }
+//     //
+//     //    @MainActor
+//     //    func fetchProjects() async throws{
+//     //        self.projects = try await ProjectService.fetchProjectList()
+//     //    }
+//
+// }
 
 //struct ProjectService{
 //    private static let projectsCollection = Firestore.firestore().collection("projects")
