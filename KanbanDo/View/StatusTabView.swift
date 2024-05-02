@@ -17,9 +17,7 @@ struct StatusTabView: View {
                     
                     // 할일 시에만 추가하기 버튼 생성
                     if selected == .workDo {
-                        Button {
-                            addTask()
-                        } label: {
+                        NavigationLink(destination: TaskAddView()){
                             VStack(spacing:20) {
                                 Image(systemName: "plus")
                                     .resizable()
@@ -29,7 +27,7 @@ struct StatusTabView: View {
                                 Text("추가하기")
                                     .foregroundStyle(.black)
                                     .frame(maxWidth: .infinity)
-
+                                
                             }
                             .padding(.vertical,5)
                             .frame(minHeight: 120)
@@ -88,10 +86,7 @@ struct StatusTabView: View {
         .padding(EdgeInsets(top: 20, leading: 16, bottom: 22, trailing: 16))
     }
     
-    // Add Task
-    func addTask() {
-        print("Task 추가")
-    }
+    
 }
 
 #Preview {

@@ -1,6 +1,9 @@
 
 import SwiftUI
 
+
+
+
 struct MainTabView: View {
     
     // 상태
@@ -13,6 +16,12 @@ struct MainTabView: View {
     
     // MyPage Sheet State
     @State var showMyPageSheet = false
+    
+    // Project Binding
+    @State var project: Project
+    
+    // UserInfo
+    var authenticationViewModel = AuthenticationViewModel.shared
     
     var body: some View {
         NavigationStack {
@@ -41,23 +50,25 @@ struct MainTabView: View {
                 }
                 .offset(y: 10)
             }
-            .navigationTitle("Project Name")
+            .navigationTitle(project.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(.hidden, for: .tabBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        print("마이페이지 클릭")
+                        showMyPageSheet.toggle()
+                        
                     } label: {
-                        VStack {
-                            Button {
-                                showMyPageSheet.toggle()
-                            } label: {
-                                Image(systemName: "person.crop.circle.fill")
-                                    .foregroundStyle(.gray)
-                                    .font(.system(size: 30))
-                            }
+                        AsyncImage(url: authenticationViewModel.photoURL) { image in
+                            image
+                                .resizable()
+                                .clipShape(Circle())
+                                
+                        } placeholder: {
+                            ProgressView()
                         }
+                        .frame(width: 30, height: 30)
+                        
                     }
                 }
             }
@@ -78,5 +89,13 @@ struct MainTabView: View {
 
 
 #Preview("MainTabView") {
-    MainTabView()
+    MainTabView(project:
+                    Project(id: "test", title: "title", description: "description", startDate: Date(), endDate: Date(),  participants: [User(
+                        id: "userid",
+                        email: "useremail",
+                        username: "userName",
+                        photoURL: nil
+                    )]
+                           )
+    )
 }

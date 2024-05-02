@@ -12,25 +12,30 @@ struct MyPageView: View {
     // MyPage Sheet Trigger
     @Binding var showMyPageSheet: Bool
     
+    var authenticationViewModel = AuthenticationViewModel.shared
+    
     var body: some View {
         VStack {
-            Image(systemName: "person.crop.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 140, height: 140)
-                .foregroundStyle(.gray)
-                .padding(.vertical)
+            AsyncImage(url: authenticationViewModel.photoURL) { image in
+                image
+                    .resizable()
+                    .clipShape(Circle())
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 140, height: 140)
+            .padding(.vertical)
             
-            Text("김성국")
+            Text(authenticationViewModel.username)
                 .font(.title2)
                 .fontWeight(.bold)
             
-            Text("tjdrnr2969@gmail.com")
+            Text(authenticationViewModel.email)
                 .tint(.black)
             
             VStack {
                 Button {
-                    print("로그아웃")
+                    authenticationViewModel.logout()
                     showMyPageSheet = false
                 } label: {
                     Text("SignOut")
