@@ -31,7 +31,9 @@ struct ProjectListView: View {
                     } label: {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 50)
-                            .foregroundStyle(.gray.opacity(0.3))
+                            .foregroundStyle(.white)
+                            .shadow(color: .gray, radius: 4, x: 1, y: 1)
+                            .opacity(0.3)
                             .overlay{
                                 Image(systemName: "plus")
                                     .foregroundStyle(.black)
@@ -40,7 +42,7 @@ struct ProjectListView: View {
                     .padding(.vertical)
                 }//: LazyVStack
                 .padding(.horizontal)
-                .buttonStyle(PlainButtonStyle())
+                .foregroundStyle(.black)
                 //디테일 뷰로 이동
                 .navigationDestination(for: Project.self) { project in
                     DetailView(project: project)

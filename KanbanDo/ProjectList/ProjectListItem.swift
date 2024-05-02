@@ -34,8 +34,12 @@ struct ProjectListItem: View {
          }//: VSTACK
          .padding()
          .frame(height: 150)
-         .background(.gray.opacity(0.3))
-         .clipShape(RoundedRectangle(cornerRadius: 10))
+         .background(
+             RoundedRectangle(cornerRadius: 10)
+                 .foregroundStyle(.white)
+                 .shadow(color: .gray, radius: 4, x: 1, y: 1)
+                 .opacity(0.3)
+         )
          .padding(.vertical)
      }
  }
