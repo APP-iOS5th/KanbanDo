@@ -13,13 +13,19 @@ struct ProjectListItem: View {
      var body: some View {
          VStack(alignment: .leading){
              Text(project.title)
-                 .font(.headline)
+                 .font(.title3)
 
              Divider()
 
              Text(project.content)
                  .font(.callout)
-
+             
+             //담당자
+             Text("담당자 : \(project.personCharge)")
+             
+             //참여인원
+             Text("참여인원 : \(project.paricipants)")
+             
              HStack{
                  Text("기간")
                  Text("\(project.startDate.formatted())")
@@ -30,10 +36,10 @@ struct ProjectListItem: View {
 
                  Text("참여인원 : \(project.paricipants)")
              }//: HSTACK
-             .font(.caption)
          }//: VSTACK
+         .font(.caption)
          .padding()
-         .frame(height: 150)
+         .frame(height: 200)
          .background(
              RoundedRectangle(cornerRadius: 10)
                  .foregroundStyle(.white)

@@ -58,26 +58,87 @@ struct ProjectListView: View {
     }
 }
 
+//임시 User Model
+//struct User: Identifiable, Codable, Hashable{
+//    var id: String
+//    let url: URL? //이미지
+//    let name: String //이름
+//    let email: String //이메일
+//}
+
+
 //임시 프로젝트 Model
- struct Project: Identifiable, Hashable{
-     let id = UUID()
-     var title: String //제목
-     var content: String //내용
-     var startDate: Date //시작일
-     var enddate: Date //종료일
-     var paricipants: Int //구성원
+struct Project: Identifiable, Hashable, Codable{
+    var id: String
+    var title: String //제목
+    var content: String //내용
+    var startDate: Date //시작일
+    var enddate: Date //종료일
+    var personCharge: String //담당자
+    var paricipants: Int //구성원
+//    var user: User?
  }
 
  //임시 ViewModel
  class ProjectViewModel: ObservableObject{
-     @Published var projects: [Project] = [Project(title: "목록 만들기0", content: "목록 만들기0", startDate: Date(), enddate: Date(), paricipants: 2),
-                                           Project(title: "목록 만들기1", content: "목록 만들기1", startDate: Date(), enddate: Date(), paricipants: 2),
-                                           Project(title: "목록 만들기2", content: "목록 만들기2", startDate: Date(), enddate: Date(), paricipants: 2),
-                                           Project(title: "목록 만들기3", content: "목록 만들기3", startDate: Date(), enddate: Date(), paricipants: 2),
-                                           Project(title: "목록 만들기4", content: "목록 만들기4", startDate: Date(), enddate: Date(), paricipants: 2),
-                                           Project(title: "목록 만들기5", content: "목록 만들기5", startDate: Date(), enddate: Date(), paricipants: 2),
-                                           Project(title: "목록 만들기6", content: "목록 만들기6", startDate: Date(), enddate: Date(), paricipants: 2)]
+     @Published var projects: [Project] = [Project(id: UUID().uuidString, title: "목록 만들기0", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                           Project(id: UUID().uuidString, title: "목록 만들기1", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                           Project(id: UUID().uuidString, title: "목록 만들기2", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                           Project(id: UUID().uuidString, title: "목록 만들기3", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                           Project(id: UUID().uuidString, title: "목록 만들기4", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                           Project(id: UUID().uuidString, title: "목록 만들기5", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2),
+                                           Project(id: UUID().uuidString, title: "목록 만들기6", content: "배추 사오기, 잠자기", startDate: Date(), enddate: Date(), personCharge: "A", paricipants: 2)]
+     //    @Published var projects = [Project]()
+     //
+     //    init(){
+     //        Task { try await fetchProjects() }
+     //    }
+     //
+     //    @MainActor
+     //    func fetchProjects() async throws{
+     //        self.projects = try await ProjectService.fetchProjectList()
+     //    }
+
  }
+
+//struct ProjectService{
+//    private static let projectsCollection = Firestore.firestore().collection("projects")
+//    static func fetchProjectList() async throws -> [Project]{
+//        let snapshot = try await projectsCollection.getDocuments()
+//        var projects = try snapshot.documents.compactMap({ try $0.data(as: Project.self)})
+//
+//        for index in 0..<projects.count{
+//            let project = projects[index]
+//        }
+//        return projects
+//    }
+//
+//    static func fetchUserProjects(email: String) async throws -> [Project]{
+//        let snapshot = try await projectsCollection.whereField("email", isEqualTo: email).getDocument()
+//        return try snapshot.documents.compactMap({ try $0.data(as: Project.self) })
+//    }
+//}
+
+//임시 UserViewModel
+//class UserViewModel{
+//    private let user: User
+//    @Published var projects = [Project]()
+//
+//    init(user: User) {
+//        self.user = user
+//
+//        Task { try await fetchUserProjects()}
+//    }
+//
+//    @MainActor
+//    func fetchUserProjects() async throws{
+//        self.projects = try await ProjectService.fetchUserProjects(email: user.email)
+//
+//        for index in 0..<projects.count{
+//            projects[index].user = self.user
+//        }
+//    }
+//}
 
  struct DetailView: View{
      var project: Project
