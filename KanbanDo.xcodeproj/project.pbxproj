@@ -29,11 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2394C0C2BE31E560060058D /* KanbanDo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanDo.entitlements; sourceTree = "<group>"; };
 		C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
 		C2619A1B2BE132C100D6AEC2 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		C2619A262BE135DE00D6AEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C284DEAD2BE1D7DB0033FDB9 /* KanbanDo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanDo.entitlements; sourceTree = "<group>"; };
 		C284DEAE2BE1F94A0033FDB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C284DEB62BE1FA570033FDB9 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		EBE7803A2BE0E26B009270F6 /* KanbanDo */ = {
 			isa = PBXGroup;
 			children = (
-				C284DEAD2BE1D7DB0033FDB9 /* KanbanDo.entitlements */,
+				C2394C0C2BE31E560060058D /* KanbanDo.entitlements */,
 				C2619A262BE135DE00D6AEC2 /* Info.plist */,
 				EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */,
 				EBE7803D2BE0E26B009270F6 /* ContentView.swift */,
