@@ -17,7 +17,7 @@ class TaskForDetail: ObservableObject { /* 클래스명 충돌로 수정 */
     //var taskID = UUID()
     var taskName: String  // 태스크 이름
     var taskDetails: String // task 설명 저장할 문자열
-    var workStatus: TaskStatus // 상태 변경 가능
+    @Published var workStatus: TaskStatus // 상태 변경 가능
     var personCharge: String // 담당자
     var deadline: Date
     
