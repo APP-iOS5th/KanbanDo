@@ -32,6 +32,8 @@
 		C284DEC02BE21B330033FDB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBF2BE21B330033FDB9 /* User.swift */; };
 		C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */; };
 		C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC32BE27F800033FDB9 /* UserViewModel.swift */; };
+		EB2690F52BE47F0600DC58E5 /* TaskForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */; };
+		EB2690F72BE47F3C00DC58E5 /* DetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2690F62BE47F3C00DC58E5 /* DetailPageView.swift */; };
 		EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */; };
 		EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7803D2BE0E26B009270F6 /* ContentView.swift */; };
 		EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE7803F2BE0E26C009270F6 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		C284DEBF2BE21B330033FDB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		C284DEC32BE27F800033FDB9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskForDetail.swift; path = KanbanDo/TaskForDetail.swift; sourceTree = SOURCE_ROOT; };
+		EB2690F62BE47F3C00DC58E5 /* DetailPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPageView.swift; path = KanbanDo/DetailPageView.swift; sourceTree = SOURCE_ROOT; };
 		EBE780382BE0E26B009270F6 /* KanbanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanbanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanDoApp.swift; sourceTree = "<group>"; };
 		EBE7803D2BE0E26B009270F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		019B5A752BE37C2F00809DB1 /* TaskView */ = {
 			isa = PBXGroup;
 			children = (
+				EB2690F62BE47F3C00DC58E5 /* DetailPageView.swift */,
+				EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */,
 				019B5A762BE37C7100809DB1 /* Task.swift */,
 				019B5A792BE37C9B00809DB1 /* TaskAddView.swift */,
 				019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */,
@@ -301,9 +307,11 @@
 				019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */,
 				C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */,
 				0459B4E22BE3F2B900288A45 /* MockData.swift in Sources */,
+				EB2690F52BE47F0600DC58E5 /* TaskForDetail.swift in Sources */,
 				BFDB651D2BE38513006D4557 /* AuthenticationViewModel.swift in Sources */,
 				019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */,
 				C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */,
+				EB2690F72BE47F3C00DC58E5 /* DetailPageView.swift in Sources */,
 				0459B4D72BE3F29900288A45 /* MyPageView.swift in Sources */,
 				C284DEBD2BE205AC0033FDB9 /* TempView.swift in Sources */,
 				C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */,
