@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProjectListItem: View {
-     var project: TempProject
+     var project: Project
 
      var body: some View {
          VStack(alignment: .leading){
@@ -17,21 +17,21 @@ struct ProjectListItem: View {
 
              Divider()
 
-             Text(project.content)
+             Text(project.description)
                  .font(.callout)
              
-             //담당자
-             Text("담당자 : \(project.personCharge)")
              
-             //참여인원
-             Text("참여인원 : \(project.paricipants)")
-             
+             //기간
              HStack{
                  Text("기간")
                  Text("\(project.startDate.formatted())")
                  Text("~")
-                 Text("\(project.enddate.formatted())")
+                 Text("\(project.endDate.formatted())")
              }//: HSTACK
+             .padding(.top)
+             
+             //구성원
+             Text("구성원 : \(project.participants.count)명")
          }//: VSTACK
          .font(.caption)
          .padding()
@@ -47,5 +47,5 @@ struct ProjectListItem: View {
  }
 
 #Preview {
-    ProjectListItem(project: TempProjectViewModel().projects[0])
+    ProjectListItem(project: Project(id: "a", title: "장보러가기", description: "배추, 양파, 고추, 파, 마늘사오기", startDate: Date(), endDate: Date(), participants: [User(id: "b", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "z", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "m", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "c", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "d", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "e", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "f", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "g", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "h", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "i", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "j", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "k", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "a", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil)]))
 }
