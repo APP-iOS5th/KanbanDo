@@ -53,7 +53,7 @@ struct ProjectListView: View {
         }//: NAVIGATIONSTACK
         .fullScreenCover(isPresented: $isPressedCreateBtn, content: {
             //프로젝트 생성 뷰
-            CreateView()
+            CreateProjectView(projectViewModel: viewModel)
         })
     }
 }
@@ -124,27 +124,6 @@ struct ProjectListView: View {
 
      var body: some View{
          Text("\(project.title)의 디테일 뷰 입니다.")
-     }
- }
-
- struct CreateView: View {
-     //MARK: - property
-     @Environment(\.dismiss) private var dismiss
-
-     var body: some View {
-         VStack{
-             Text("프로젝트 생성 뷰 입니다.")
-             Button {
-                 dismiss()
-             } label: {
-                 RoundedRectangle(cornerRadius: 10)
-                     .stroke(.gray, lineWidth: 2)
-                     .frame(width: 150, height: 50)
-                     .overlay{
-                         Text("닫기")
-                     }
-             }
-         }
      }
  }
     

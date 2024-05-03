@@ -12,10 +12,11 @@ import FirebaseFirestore
 class ProjectViewModel {
     var projects: [Project]
     private let dbCollection = Firestore.firestore().collection("projects")
-//    private let listener: ListenerRegistration?
+    private var listener: ListenerRegistration?
     
     init(projects: [Project] = []) {
         self.projects = projects
+        startRealtimeUpdates()
     }
     
     // 프로젝트 리스트 보여주는 곳에서 수정해서 사용하시면 됩니당
@@ -46,4 +47,25 @@ class ProjectViewModel {
             $0.startDate > $1.startDate
         }
     }
+    
+    private func startRealtimeUpdates() {
+            listener = dbCollection.addSnapshotListener { [self] querySnapshot, error in
+                guard let snapshot = querySnapshot else {
+                    print("Error fetching snapshots: \(error!)")
+                    return
+                }
+                snapshot.documentChanges.forEach { diff in
+                    if (diff.type == .added) {
+                        print("New comment: \(diff.document.data())")
+                    }
+                    if (diff.type == .modified) {
+                        print("Modified comment: \(diff.document.data())")
+                    }
+                    if (diff.type == .removed) {
+                        print("Removed comment: \(diff.document.data())")
+                    }
+                }
+                updateProjects(snapshot: snapshot)
+            }
+        }
 }
