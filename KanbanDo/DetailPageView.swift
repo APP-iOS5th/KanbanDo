@@ -66,9 +66,9 @@ struct DetailPageView: View {
                         .padding(.vertical)
                     VStack {
                         Picker("", selection: $tasks.workStatus) {
-                            Text("할 일").tag(ProjectDo.projectStatus.workDo)
-                            Text("진행 중").tag(ProjectDo.projectStatus.doing)
-                            Text("완료").tag(ProjectDo.projectStatus.done)
+                            Text("할 일").tag(tasks.workDo)
+                            Text("진행 중").tag(tasks.doing)
+                            Text("완료").tag(tasks.done)
                         }
                     }
                 }
