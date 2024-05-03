@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  taskCreationView
-//
-//  Created by 김혜림 on 4/30/24.
-//
+
 
 import SwiftUI
 import SwiftData
@@ -17,36 +12,29 @@ struct TaskAddView: View {
     //dlwjs
     @Environment(\.dismiss) var dismiss
     
-//    @Binding var showSheet: Bool
-    @State var taskTitle: String = ""
-    @State var taskText: String = ""
-    @State private var taskDeadline = Date()
-    @State var taskStatus: Color =  .gray
-    @State var taskPersonCharge: String = ""
+    //    @Binding var showSheet: Bool
+    @State var title: String = ""
+    @State var description: String = ""
+    @State var closingDate: Date = Date()
+    @State var status: taskStatus =  .workDo
+    @State var manager: String = ""
     
-    let taskStatusGroup: [Color] = [.gray, .green, .blue]
+    //팀원 추가
+    @State private var participants: [User] = []
+    @State private var isNewNotePresented = false
+    
     
     var body: some View {
         VStack {
             // 상태 선택창
             ScrollView {
                 VStack(alignment: .leading) {
-                    VStack(alignment: .leading) {
-                        Text("상태")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                        HStack {
-                            //todo: 상태 선택 버튼
-                        }
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
-                    
                     
                     VStack(alignment: .leading) {
                         Text("할 일")
                             .font(.title3)
                             .fontWeight(.bold)
-                        TextField("할 일을 적어주세요", text: $taskTitle, axis: .vertical)
+                        TextField("할 일을 적어주세요", text: $title, axis: .vertical)
                             .frame(width: 320, height: 25)
                             .padding(16)
                             .border(Color.gray.opacity(0.4), width: 1)
@@ -54,12 +42,12 @@ struct TaskAddView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
                     
-                                        
+                    
                     VStack(alignment: .leading) {
                         Text("세부 내용")
                             .font(.title3)
                             .fontWeight(.bold)
-                        TextField("세부 내용을 적어주세요", text: $taskText, axis: .vertical)
+                        TextField("세부 내용을 적어주세요", text: $description, axis: .vertical)
                             .frame(width: 320, height: 100)
                             .padding(16)
                             .border(Color.gray.opacity(0.4), width: 1)
@@ -70,10 +58,10 @@ struct TaskAddView: View {
                     
                     VStack(alignment: .leading) {
                         //todo: 마감일 선택
-                        DatePicker("마감일", selection: $taskDeadline, in: Date()..., displayedComponents: .date)
+                        DatePicker("마감일", selection: $closingDate, in: Date()..., displayedComponents: .date)
                             .font(.title3)
                             .fontWeight(.bold)
-                        //.datePickerStyle(GraphicalDatePickerStyle()).labelsHidden()
+                        
                         
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
@@ -83,44 +71,78 @@ struct TaskAddView: View {
                         Text("담당자")
                             .font(.title3)
                             .fontWeight(.bold)
-                        //todo: 프로젝트에 포함된 사람 등록하는 기능
+                        Button {
+                            isNewNotePresented.toggle()
+                        } label: {
+                            HStack {
+                                Spacer()
+                                Image(systemName: "plus")
+                                    .font(.headline)
+                                Spacer()
+                            }
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.gray.opacity(0.3))
+                            )
+                        }
+                        .sheet(isPresented: $isNewNotePresented) {
+                            SearchUserView(participants: $participants)
+                        }
+                        
+                        ForEach(participants,  id: \.self)  { user in
+                            HStack {
+                                AsyncImage(url: user.photoURL) { image in
+                                    image
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .frame(width: 50, height: 50)
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                Text(user.username)
+                            }
+                        }
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 100, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
                 
+                Spacer()
+                
                 //todo: 위치/모양 바꾸기
-               Button {
-                   dismiss()
-                   addTask(taskTitle, taskText, taskPersonCharge, color: taskStatus)
-                   
+                Button {
+                    dismiss()
+                    addTask(title, description, closingDate, manager)
+                    
                 } label: {
                     HStack {
                         Image(systemName: "checkmark")
                         Text("추가하기")
                     }
                 }
-                .disabled(taskTitle.isEmpty)
-                .disabled(taskText.isEmpty)
+                .disabled(title.isEmpty)
+                .disabled(description.isEmpty)
+                .padding(.top, 30)
             }
-
-//            Button("태스크 추가") {
-//                
-//            }
-//            .disabled(taskTitle.isEmpty)
-//            .disabled(taskText.isEmpty)
+            
         }
         .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
         .scrollIndicators(.hidden, axes: .vertical)
     }
     
-    func addTask(_ title: String, _ text: String, _ personCharge: String, color: Color) {
-        let task = ProjectTask(color: color, title: title, text: text, deadline: Date(), personCharge: personCharge)
+    
+    // 테스크 추가
+    func addTask(_ title: String, _ description: String, _ closingDate: Date, _ manager: String) {
+        
+        let task = ProjectTask(title: title, taskDescription: description, closingDate: Date(), manager: participants[0].username, status: .workDo)
         modelContext.insert(task)
     }
     
 }
 
+
+
 #Preview {
-    ContentView()
+    TaskAddView()
         .modelContainer(for: ProjectTask.self, inMemory: true)
 }
