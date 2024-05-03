@@ -40,6 +40,29 @@ class TaskViewModel {
         }
     }
     
+    //수정 기능
+    func editTask(task: ProjectTask, status: TaskStatus) {
+        let docRef = dbCollection.whereField("id", isEqualTo: task.id)
+        
+        docRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching documents: \(error)")
+            } else {
+                for document in querySnapshot!.documents {
+                    document.reference.updateData([
+                        "status": status.rawValue
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     private func updateTasks(snapshot: QuerySnapshot) {
         let tasks: [ProjectTask] = snapshot.documents.compactMap { document in
             try? document.data(as: ProjectTask.self)

@@ -40,92 +40,61 @@ struct StatusTabView: View {
                                 .fill(Color.gray.opacity(0.3))
                         )
                     }
-                    // Task 목록
-                    ForEach(workList, id: \.self) { work in
-                        NavigationLink(destination: DetailPageView(tasks: work)) {
-                            VStack(alignment: .leading) {
-                                Text(work.title)
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                    .padding(.bottom, 10)
-                                
-                                
-                                Text(work.description)
-                                    .padding(.bottom, 40)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .lineLimit(2)
-                                    .lineSpacing(2)
-                                    .multilineTextAlignment(.leading)
-                                
-                                
-                                
-                                HStack {
-                                    Text("마감일")
-                                    Text("|")
-                                    Text(work.manager.username)
-                                }
-                                .font(.system(size: 14))
-                                .tint(Color.gray)
-                                
-                                Spacer()
-                                    .frame(maxWidth: .infinity)
-                            }
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.gray.opacity(0.3))
-                            )
-                            .frame(maxWidth: .infinity, minHeight: 150, alignment: .leading)
+                    if workList.count == 0 && workList.isEmpty {
+                        Spacer()
+                        VStack {
+                            Text("리스트가 존재하지 않습니다.")
+                                .font(.callout)
                         }
-                        .tint(.black)
+                        Spacer()
                         
-//                        Button {
-//                            print(work)
-//                        } label: {
-//                            VStack(alignment: .leading) {
-//                                Text(work.title)
-//                                    .font(.title)
-//                                    .fontWeight(.bold)
-//                                    .padding(.bottom, 10)
-//                                
-//                                
-//                                Text(work.description)
-//                                    .padding(.bottom, 40)
-//                                    .frame(maxWidth: .infinity, alignment: .leading)
-//                                    .lineLimit(2)
-//                                    .lineSpacing(2)
-//                                    .multilineTextAlignment(.leading)
-//                                
-//                                
-//                                
-//                                HStack {
-//                                    Text("마감일")
-//                                    Text("|")
-//                                    Text(work.manager.username)
-//                                }
-//                                .font(.system(size: 14))
-//                                .tint(Color.gray)
-//                                
-//                                Spacer()
-//                                    .frame(maxWidth: .infinity)
-//                            }
-//                            .padding()
-//                            .background(
-//                                RoundedRectangle(cornerRadius: 10)
-//                                    .fill(Color.gray.opacity(0.3))
-//                            )
-//                            .frame(maxWidth: .infinity, minHeight: 150, alignment: .leading)
-//                            
-//                        }
-//                        .tint(.black)
+                    } else {
+                        // Task 목록
+                        ForEach(workList, id: \.self) { work in
+                            NavigationLink(destination: DetailPageView(tasks: work)) {
+                                VStack(alignment: .leading) {
+                                    Text(work.title)
+                                        .font(.title)
+                                        .fontWeight(.bold)
+                                        .padding(.bottom, 10)
+                                    
+                                    
+                                    Text(work.description)
+                                        .padding(.bottom, 40)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .lineLimit(2)
+                                        .lineSpacing(2)
+                                        .multilineTextAlignment(.leading)
+                                    
+                                    
+                                    
+                                    HStack {
+                                        Text("마감일")
+                                        Text("|")
+                                        Text(work.manager.username)
+                                    }
+                                    .font(.system(size: 14))
+                                    .tint(Color.gray)
+                                    
+                                    Spacer()
+                                        .frame(maxWidth: .infinity)
+                                }
+                                .padding()
+                                .background(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.gray.opacity(0.3))
+                                )
+                                .frame(maxWidth: .infinity, minHeight: 150, alignment: .leading)
+                            }
+                            .tint(.black)
+                        }
                     }
                 }
             }
+            .padding(EdgeInsets(top: 20, leading: 16, bottom: 22, trailing: 16))
         }
-        .padding(EdgeInsets(top: 20, leading: 16, bottom: 22, trailing: 16))
+        
     }
-    
-    
 }
 
 //#Preview {
