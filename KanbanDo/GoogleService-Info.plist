@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>654470391063-9g3i6njbf790mn0hv6ubi30f5gj5c9cd.apps.googleusercontent.com</string>
+	<string>704886602405-32igoa0a2gccfd6i92psr0ia6261nb8b.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.654470391063-9g3i6njbf790mn0hv6ubi30f5gj5c9cd</string>
+	<string>com.googleusercontent.apps.704886602405-32igoa0a2gccfd6i92psr0ia6261nb8b</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCIi2jAdpOT0AAqQYbZ1DCpIJeQGoBwCQk</string>
+	<string>AIzaSyAwvTWI1fUY-liuJoPtgD6kmQPiGpmt5wA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>654470391063</string>
+	<string>704886602405</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>hwangseunghye.KanbanDo</string>
 	<key>PROJECT_ID</key>
-	<string>kanbando-d932f</string>
+	<string>kanbando-3a998</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kanbando-d932f.appspot.com</string>
+	<string>kanbando-3a998.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:654470391063:ios:4479fa8ae99cfd256dc352</string>
+	<string>1:704886602405:ios:9301472cfb6969d6dc6b4c</string>
 </dict>
 </plist>
