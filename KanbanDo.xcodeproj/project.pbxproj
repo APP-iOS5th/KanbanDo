@@ -31,7 +31,6 @@
 		C284DEC02BE21B330033FDB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBF2BE21B330033FDB9 /* User.swift */; };
 		C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */; };
 		C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC32BE27F800033FDB9 /* UserViewModel.swift */; };
-		C2D196E72BE4ACDD005E475F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2D196E62BE4ACDD005E475F /* GoogleService-Info.plist */; };
 		C2F242502BE49E3A0094FFF7 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2424F2BE49E3A0094FFF7 /* TaskViewModel.swift */; };
 		C2F242522BE4A69F0094FFF7 /* SearchManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F242512BE4A69F0094FFF7 /* SearchManagerView.swift */; };
 		EB2690F52BE47F0600DC58E5 /* TaskForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */; };
@@ -64,7 +63,6 @@
 		C284DEBF2BE21B330033FDB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		C284DEC32BE27F800033FDB9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		C2D196E62BE4ACDD005E475F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2F2424F2BE49E3A0094FFF7 /* TaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		C2F242512BE4A69F0094FFF7 /* SearchManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManagerView.swift; sourceTree = "<group>"; };
 		EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskForDetail.swift; path = KanbanDo/TaskForDetail.swift; sourceTree = SOURCE_ROOT; };
@@ -212,7 +210,6 @@
 				C284DEBE2BE20B6A0033FDB9 /* Project */,
 				019B5A802BE37DCD00809DB1 /* View */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
-				C2D196E62BE4ACDD005E475F /* GoogleService-Info.plist */,
 				EBE780412BE0E26C009270F6 /* Preview Content */,
 			);
 			path = KanbanDo;
@@ -298,7 +295,6 @@
 			files = (
 				EBE780432BE0E26C009270F6 /* Preview Assets.xcassets in Resources */,
 				EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */,
-				C2D196E72BE4ACDD005E475F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
