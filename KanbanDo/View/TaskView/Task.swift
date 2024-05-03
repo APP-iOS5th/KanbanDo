@@ -16,7 +16,7 @@ enum taskStatus: Comparable, Codable {
 
 
 @Model
-class ProjectTask {
+class ProjectTask : ObservableObject{
     
     
     
