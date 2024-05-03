@@ -11,6 +11,12 @@ struct ProjectListItem: View {
     //MARK: - Property
      var project: Project
     @State private var participantsState = false
+    private let dateformat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyy-MM-dd"
+        formatter.locale = Locale(identifier: "ko_KR")
+        return formatter
+    }()
     
      var body: some View {
          VStack(alignment: .leading){
@@ -31,9 +37,9 @@ struct ProjectListItem: View {
              //기간
              HStack{
                  Image(systemName: "timer")
-                 Text("\(project.startDate.formatted())") +
-                 Text("~") +
-                 Text("\(project.endDate.formatted())")
+                 Text("\(project.startDate, formatter: dateformat)")
+                 Text("~")
+                 Text("\(project.endDate, formatter: dateformat)")
              }//: HSTACK
              
 //             Text("참여인원 :")
