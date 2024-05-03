@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		019B5A772BE37C7100809DB1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A762BE37C7100809DB1 /* Task.swift */; };
 		019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A792BE37C9B00809DB1 /* TaskAddView.swift */; };
-		019B5A7D2BE37CF600809DB1 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7C2BE37CF600809DB1 /* TaskListView.swift */; };
 		019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */; };
 		0459B4D72BE3F29900288A45 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4D42BE3F29900288A45 /* MyPageView.swift */; };
 		0459B4D82BE3F29900288A45 /* StatusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4D52BE3F29900288A45 /* StatusTabView.swift */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		019B5A762BE37C7100809DB1 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		019B5A792BE37C9B00809DB1 /* TaskAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
-		019B5A7C2BE37CF600809DB1 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		0459B4D42BE3F29900288A45 /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageView.swift; path = ../../../../CanvanBoard/CanvanBoard/View/MyPageView.swift; sourceTree = "<group>"; };
 		0459B4D52BE3F29900288A45 /* StatusTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTabView.swift; path = ../../../../CanvanBoard/CanvanBoard/View/StatusTabView.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				019B5A762BE37C7100809DB1 /* Task.swift */,
-				019B5A7C2BE37CF600809DB1 /* TaskListView.swift */,
 				019B5A792BE37C9B00809DB1 /* TaskAddView.swift */,
 				019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */,
 			);
@@ -316,7 +313,6 @@
 				EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */,
 				79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */,
 				79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */,
-				019B5A7D2BE37CF600809DB1 /* TaskListView.swift in Sources */,
 				C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */,
 				EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */,
 				019B5A772BE37C7100809DB1 /* Task.swift in Sources */,

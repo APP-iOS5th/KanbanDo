@@ -16,7 +16,7 @@ struct TaskAddView: View {
     @State var title: String = ""
     @State var description: String = ""
     @State var closingDate: Date = Date()
-    @State var status: projectStatus =  .workDo
+    @State var status: taskStatus =  .workDo
     @State var manager: String = ""
     
     //팀원 추가
@@ -24,24 +24,11 @@ struct TaskAddView: View {
     @State private var isNewNotePresented = false
     
     
-    
-    //let taskStatusGroup: [Color] = [.gray, .green, .blue]
-    
     var body: some View {
         VStack {
             // 상태 선택창
             ScrollView {
                 VStack(alignment: .leading) {
-                    //                    VStack(alignment: .leading) {
-                    //                        Text("상태")
-                    //                            .font(.title3)
-                    //                            .fontWeight(.bold)
-                    //                        HStack {
-                    //                            //todo: 상태 선택 버튼
-                    //                        }
-                    //                    }
-                    //                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
-                    
                     
                     VStack(alignment: .leading) {
                         Text("할 일")
@@ -74,7 +61,7 @@ struct TaskAddView: View {
                         DatePicker("마감일", selection: $closingDate, in: Date()..., displayedComponents: .date)
                             .font(.title3)
                             .fontWeight(.bold)
-                        //.datePickerStyle(GraphicalDatePickerStyle()).labelsHidden()
+                        
                         
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
@@ -93,29 +80,34 @@ struct TaskAddView: View {
                                     .font(.headline)
                                 Spacer()
                             }
-                            .background(Color.gray)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.gray.opacity(0.3))
+                            )
                         }
                         .sheet(isPresented: $isNewNotePresented) {
                             SearchUserView(participants: $participants)
                         }
-                        List {
-                            ForEach(participants) { user in
-                                HStack {
-                                    AsyncImage(url: user.photoURL) { image in
-                                        image
-                                            .resizable()
-                                            .clipShape(Circle())
-                                            .frame(width: 50, height: 50)
-                                    } placeholder: {
-                                        ProgressView()
-                                    }
-                                    Text(user.username)
+                        
+                        ForEach(participants,  id: \.self)  { user in
+                            HStack {
+                                AsyncImage(url: user.photoURL) { image in
+                                    image
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .frame(width: 50, height: 50)
+                                } placeholder: {
+                                    ProgressView()
                                 }
+                                Text(user.username)
                             }
                         }
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
+                
+                Spacer()
                 
                 //todo: 위치/모양 바꾸기
                 Button {
@@ -130,40 +122,27 @@ struct TaskAddView: View {
                 }
                 .disabled(title.isEmpty)
                 .disabled(description.isEmpty)
+                .padding(.top, 30)
             }
             
-            //            Button("태스크 추가") {
-            //
-            //            }
-            //            .disabled(taskTitle.isEmpty)
-            //            .disabled(taskText.isEmpty)
         }
         .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
         .scrollIndicators(.hidden, axes: .vertical)
     }
     
-    //    func addTask(_ title: String, _ text: String, _ personCharge: String, color: Color) {
-    //        let task = Task(color: color, title: title, text: text, deadline: Date(), personCharge: personCharge)
-    //        modelContext.insert(task)
-    //    }
     
+    // 테스크 추가
     func addTask(_ title: String, _ description: String, _ closingDate: Date, _ manager: String) {
-        
-        
         
         let task = ProjectTask(title: title, taskDescription: description, closingDate: Date(), manager: participants[0].username, status: .workDo)
         modelContext.insert(task)
     }
     
-    //        var title: String
-    //        var description: String
-    //        var status: projectStatus
-    //        var manager: String
-    //        var closingDate: Date
-    
 }
 
+
+
 #Preview {
-    ContentView()
+    TaskAddView()
         .modelContainer(for: ProjectTask.self, inMemory: true)
 }

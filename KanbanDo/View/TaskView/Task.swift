@@ -8,13 +8,13 @@
 import SwiftData
 import SwiftUI
 
-enum projectStatus: Comparable, Codable {
+enum taskStatus: Comparable, Codable {
     case workDo
     case doing
     case done
 }
 
-//실습 내용 중 ColorMemo 참고해 작성 중
+
 @Model
 class ProjectTask {
     
@@ -29,7 +29,7 @@ class ProjectTask {
     var taskDescription: String // 구체적인 할 일 내용
     var closingDate: Date // 마감일
     var manager: String // 담당자. 데이터 타입을 뭘로 받으면 좋을지 모르겠어서 일단 String으로
-    var status: projectStatus
+    var status: taskStatus
     
     @Transient
     var createdClosingDateString: String {
@@ -41,14 +41,9 @@ class ProjectTask {
         }
     }
     
+
     
-    //컬러값 반환
-    //    @Transient
-    //    var color: Color {
-    //        return Color(hex: colorHex)
-    //    }
-    
-    init(title: String, taskDescription: String, closingDate: Date, manager: String, status: projectStatus) {
+    init(title: String, taskDescription: String, closingDate: Date, manager: String, status: taskStatus) {
         //self.colorHex = Task.hexStringFormColor(color: color)
         
         self.title = title
@@ -57,18 +52,5 @@ class ProjectTask {
         self.manager = manager
         self.status = status
     }
-    
-    //안쓰는 듯
-    //    static func hexStringFormColor(color: Color) -> String {
-    //        let components = color.resolve(in: EnvironmentValues())
-    //
-    //        //rgb 변수 만들기
-    //        let r: CGFloat = CGFloat(components.red)
-    //        let g: CGFloat = CGFloat(components.green)
-    //        let b: CGFloat = CGFloat(components.blue)
-    //
-    //        let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
-    //        print(hexString)
-    //        return hexString
-    //    }
+
 }
