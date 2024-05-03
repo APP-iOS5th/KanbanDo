@@ -10,7 +10,8 @@ import SwiftUI
 struct ProjectListView: View {
     
     //MARK: - property
-    @State private var viewModel = ProjectViewModel()
+    var authenticationViewModel = AuthenticationViewModel.shared
+    var projectViewModel: ProjectViewModel = ProjectViewModel()
     @State private var isPressedCreateBtn = false
     
     var body: some View {
@@ -18,8 +19,8 @@ struct ProjectListView: View {
             ScrollView{
                 LazyVStack{
                     //프로젝트 목록
-                    ForEach(viewModel.projects){ project in
-                        NavigationLink(value: project) {
+                    ForEach(projectViewModel.projects){ project in
+                        NavigationLink(destination: MainTabView(project: project)) {
                             ProjectListItem(project: project)
                         }
                     }//: LOOP
@@ -43,18 +44,17 @@ struct ProjectListView: View {
                 }//: LazyVStack
                 .padding(.horizontal)
                 .foregroundStyle(.black)
-                //디테일 뷰로 이동
-                .navigationDestination(for: Project.self) { project in
-                    DetailView(project: project)
-                }
             }//: SCROLLVIEW
             .navigationTitle("칸반도")
             .navigationBarTitleDisplayMode(.inline)
         }//: NAVIGATIONSTACK
         .fullScreenCover(isPresented: $isPressedCreateBtn, content: {
             //프로젝트 생성 뷰
-            CreateProjectView(projectViewModel: viewModel)
+            CreateProjectView(projectViewModel: projectViewModel)
         })
+        .task {
+            projectViewModel.fetchProjects()
+        }
     }
 }
 

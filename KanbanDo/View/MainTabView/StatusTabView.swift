@@ -4,10 +4,12 @@ import SwiftUI
 
 struct StatusTabView: View {
     // 샘플 데이터
-    let workList: [ProjectDo]
+    let workList: [ProjectTask]
     
     // 필터링 데이터 바인딩
     @Binding var selected: MainTabView.Tab
+    
+    @State var project: Project
     
     var body: some View {
         
@@ -17,7 +19,7 @@ struct StatusTabView: View {
                     
                     // 할일 시에만 추가하기 버튼 생성
                     if selected == .workDo {
-                        NavigationLink(destination: TaskAddView()){
+                        NavigationLink(destination: TaskAddView(project: project)){
                             VStack(spacing:20) {
                                 Image(systemName: "plus")
                                     .resizable()
@@ -40,9 +42,7 @@ struct StatusTabView: View {
                     }
                     // Task 목록
                     ForEach(workList, id: \.self) { work in
-                        Button {
-                            print(work)
-                        } label: {
+                        NavigationLink(destination: DetailPageView(tasks: work)) {
                             VStack(alignment: .leading) {
                                 Text(work.title)
                                     .font(.title)
@@ -62,7 +62,7 @@ struct StatusTabView: View {
                                 HStack {
                                     Text("마감일")
                                     Text("|")
-                                    Text(work.manager)
+                                    Text(work.manager.username)
                                 }
                                 .font(.system(size: 14))
                                 .tint(Color.gray)
@@ -76,9 +76,48 @@ struct StatusTabView: View {
                                     .fill(Color.gray.opacity(0.3))
                             )
                             .frame(maxWidth: .infinity, minHeight: 150, alignment: .leading)
-                            
                         }
                         .tint(.black)
+                        
+//                        Button {
+//                            print(work)
+//                        } label: {
+//                            VStack(alignment: .leading) {
+//                                Text(work.title)
+//                                    .font(.title)
+//                                    .fontWeight(.bold)
+//                                    .padding(.bottom, 10)
+//                                
+//                                
+//                                Text(work.description)
+//                                    .padding(.bottom, 40)
+//                                    .frame(maxWidth: .infinity, alignment: .leading)
+//                                    .lineLimit(2)
+//                                    .lineSpacing(2)
+//                                    .multilineTextAlignment(.leading)
+//                                
+//                                
+//                                
+//                                HStack {
+//                                    Text("마감일")
+//                                    Text("|")
+//                                    Text(work.manager.username)
+//                                }
+//                                .font(.system(size: 14))
+//                                .tint(Color.gray)
+//                                
+//                                Spacer()
+//                                    .frame(maxWidth: .infinity)
+//                            }
+//                            .padding()
+//                            .background(
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .fill(Color.gray.opacity(0.3))
+//                            )
+//                            .frame(maxWidth: .infinity, minHeight: 150, alignment: .leading)
+//                            
+//                        }
+//                        .tint(.black)
                     }
                 }
             }
@@ -89,6 +128,6 @@ struct StatusTabView: View {
     
 }
 
-#Preview {
-    StatusTabView(workList: ProjectDo.sampleDo, selected: .constant(.workDo))
-}
+//#Preview {
+//    StatusTabView(workList: ProjectDo.sampleDo, selected: .constant(.workDo))
+//}

@@ -20,6 +20,11 @@ struct ProjectListItem: View {
              Text(project.description)
                  .font(.callout)
              
+             //담당자
+//             Text("담당자 : \(project.personCharge)")
+             
+             //참여인원
+             Text("참여인원 : \(project.participants.count)")
              
              //기간
              HStack{
@@ -47,5 +52,5 @@ struct ProjectListItem: View {
  }
 
 #Preview {
-    ProjectListItem(project: Project(id: "a", title: "장보러가기", description: "배추, 양파, 고추, 파, 마늘사오기", startDate: Date(), endDate: Date(), participants: [User(id: "b", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "z", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "m", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "c", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "d", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "e", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "f", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "g", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "h", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "i", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "j", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "k", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil),User(id: "a", email: "aaaa123@gmail.com", username: "aaaa", photoURL: nil)]))
+    ProjectListItem(project: ProjectViewModel().projects[0])
 }

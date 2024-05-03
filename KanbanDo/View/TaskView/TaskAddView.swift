@@ -16,13 +16,15 @@ struct TaskAddView: View {
     @State var title: String = ""
     @State var description: String = ""
     @State var closingDate: Date = Date()
-    @State var status: taskStatus =  .workDo
-    @State var manager: String = ""
+    @State var status: TaskStatus =  .workDo
+    @State var manager: User?
+    @State var project: Project
     
     //팀원 추가
     @State private var participants: [User] = []
     @State private var isNewNotePresented = false
     
+    var taskViewModel: TaskViewModel = TaskViewModel()
     
     var body: some View {
         VStack {
@@ -87,12 +89,13 @@ struct TaskAddView: View {
                             )
                         }
                         .sheet(isPresented: $isNewNotePresented) {
-                            SearchUserView(participants: $participants)
+                            SearchManagerView(participants: project.participants, manager: $manager)
+//                            SearchUserView(participants: $participants)
                         }
                         
-                        ForEach(participants,  id: \.self)  { user in
+                        if let manager = manager {
                             HStack {
-                                AsyncImage(url: user.photoURL) { image in
+                                AsyncImage(url: manager.photoURL) { image in
                                     image
                                         .resizable()
                                         .clipShape(Circle())
@@ -100,7 +103,7 @@ struct TaskAddView: View {
                                 } placeholder: {
                                     ProgressView()
                                 }
-                                Text(user.username)
+                                Text(manager.username)
                             }
                         }
                     }
@@ -111,8 +114,9 @@ struct TaskAddView: View {
                 
                 //todo: 위치/모양 바꾸기
                 Button {
+                    taskViewModel.addTask(title: title, description: description, closingDate: closingDate,
+                                          manager: manager, status: status, projectID: project.id)
                     dismiss()
-                    addTask(title, description, closingDate, manager)
                     
                 } label: {
                     HStack {
@@ -131,18 +135,18 @@ struct TaskAddView: View {
     }
     
     
-    // 테스크 추가
-    func addTask(_ title: String, _ description: String, _ closingDate: Date, _ manager: String) {
-        
-        let task = ProjectTask(title: title, taskDescription: description, closingDate: Date(), manager: participants[0].username, status: .workDo)
-        modelContext.insert(task)
-    }
+    // 테스크 추가. Firebase에 추가하면서 Swiftdata 미사용
+//    func addTask(_ title: String, _ description: String, _ closingDate: Date, _ manager: String) {
+//        
+//        let task = ProjectTask(title: title, taskDescription: description, closingDate: Date(), manager: participants[0].username, status: .workDo)
+//        modelContext.insert(task)
+//    }
     
 }
 
 
 
-#Preview {
-    TaskAddView()
-        .modelContainer(for: ProjectTask.self, inMemory: true)
-}
+//#Preview {
+//    TaskAddView()
+//        .modelContainer(for: ProjectTask.self, inMemory: true)
+//}

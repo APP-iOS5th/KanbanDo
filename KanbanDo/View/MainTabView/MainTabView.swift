@@ -23,23 +23,25 @@ struct MainTabView: View {
     // UserInfo
     var authenticationViewModel = AuthenticationViewModel.shared
     
+    var taskViewModel: TaskViewModel = TaskViewModel()
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 TabView(selection: $selected) {
                     Group {
                         NavigationStack {
-                            StatusTabView(workList: workListFilter(.workDo),selected: $selected)
+                            StatusTabView(workList: workListFilter(.workDo),selected: $selected, project: project)
                         }
                         .tag(Tab.workDo)
                         
                         NavigationStack {
-                            StatusTabView(workList: workListFilter(.doing),selected: $selected)
+                            StatusTabView(workList: workListFilter(.doing),selected: $selected, project: project)
                         }
                         .tag(Tab.doing)
                         
                         NavigationStack {
-                            StatusTabView(workList: workListFilter(.done),selected: $selected)
+                            StatusTabView(workList: workListFilter(.done),selected: $selected, project: project)
                         }
                         .tag(Tab.done)
                     }
@@ -75,12 +77,15 @@ struct MainTabView: View {
             .sheet(isPresented: $showMyPageSheet) {
                 MyPageView(showMyPageSheet: $showMyPageSheet)
             }
+            .task {
+                taskViewModel.fetchTasks(project: project)
+            }
         }
     }
     
     // 상태에 따라 필터링된 배열 반환
-    private func workListFilter(_ status: ProjectDo.projectStatus) -> [ProjectDo] {
-        return ProjectDo.sampleDo.filter { $0.status == status }
+    private func workListFilter(_ status: TaskStatus) -> [ProjectTask] {
+        return taskViewModel.tasks.filter { $0.status == status }
     }
     
 }

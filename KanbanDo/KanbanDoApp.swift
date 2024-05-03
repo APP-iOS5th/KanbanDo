@@ -27,7 +27,6 @@ struct KanbanDoApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView()
-                .modelContainer(for: ProjectTask.self)
         }
     }
 }

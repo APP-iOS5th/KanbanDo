@@ -9,12 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct DetailPageView: View {
-    @StateObject private var tasks: ProjectTask
+    @State var tasks: ProjectTask
     // ProjectTask 타입으로 변경
-    init(title: String, taskDescription: String, closingDate: Date, manager: String, status: taskStatus) {
-            let task = ProjectTask(title: title, taskDescription: taskDescription, closingDate: closingDate, manager: manager, status: status)
-            _tasks = StateObject(wrappedValue: task)
-        }
+//    init(title: String, taskDescription: String, closingDate: Date, manager: String, status: TaskStatus) {
+//            let task = ProjectTask(title: title, taskDescription: taskDescription, closingDate: closingDate, manager: manager, status: status)
+//            _tasks = StateObject(wrappedValue: task)
+//        }
     
     var body: some View {
         
@@ -27,7 +27,7 @@ struct DetailPageView: View {
                         .padding(.vertical)
                     
                     //TextField("설명을 입력하세요.", text: $tasks.taskDetails, axis: .vertical)
-                    Text(tasks.taskDescription)
+                    Text(tasks.description)
                         .padding()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.gray.opacity(0.1))
@@ -42,7 +42,7 @@ struct DetailPageView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                     Spacer()
-                    Text(tasks.manager)
+                    Text(tasks.manager.username)
                             .padding(.vertical)
                             .frame(alignment: .trailing)
                     
@@ -79,8 +79,8 @@ struct DetailPageView: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        DetailPageView(title: "Test", taskDescription: "이 편지는 영국에서 시작됐고", closingDate: Date(), manager: "담당자", status: .done)
-    }
-}
+//#Preview {
+//    NavigationStack {
+//        DetailPageView(title: "Test", taskDescription: "이 편지는 영국에서 시작됐고", closingDate: Date(), manager: "담당자", status: .done)
+//    }
+//}
