@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+
 struct DetailPageView: View {
     @State var tasks: ProjectTask
     // ProjectTask 타입으로 변경
@@ -15,6 +16,14 @@ struct DetailPageView: View {
 //            let task = ProjectTask(title: title, taskDescription: taskDescription, closingDate: closingDate, manager: manager, status: status)
 //            _tasks = StateObject(wrappedValue: task)
 //        }
+    
+    // Status 변경
+    @State private var changeStatus: TaskStatus = .workDo
+    var taskViewModel: TaskViewModel = TaskViewModel()
+    
+    @Environment(\.dismiss) var dismiss
+    
+
     
     var body: some View {
         
@@ -65,17 +74,39 @@ struct DetailPageView: View {
                         .fontWeight(.bold)
                         .padding(.vertical)
                     VStack {
-                        Picker("", selection: $tasks.status) {
+                        Picker("", selection: $changeStatus) {
                             Text("할 일").tag(TaskStatus.workDo)
                             Text("진행 중").tag(TaskStatus.doing)
                             Text("완료").tag(TaskStatus.done)
                         }
+                        .onAppear {
+                            changeStatus = tasks.status
+                        }
                     }
+                }
+                // 상태변경
+                HStack(alignment: .center) {
+                    Button {
+                        taskViewModel.editTask(task: tasks, status: changeStatus)
+                        dismiss()
+                    } label: {
+                        HStack(alignment: .center){
+                            Spacer()
+                            Image(systemName: "checkmark")
+                            Text("변경하기")
+                            Spacer()
+                        }
+                    }
+                    .disabled(changeStatus == tasks.status)
                 }
             }
         }
         .navigationTitle("상세 페이지")
         .navigationBarTitleDisplayMode(.inline)
+        
+
+        
+       
     }
 }
 
