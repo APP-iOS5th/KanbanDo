@@ -11,6 +11,7 @@
 		019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A792BE37C9B00809DB1 /* TaskAddView.swift */; };
 		019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */; };
 		0459B4DF2BE3F2AB00288A45 /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */; };
+		79D86BF12BE512260098D5CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79D86BF02BE512260098D5CA /* GoogleService-Info.plist */; };
 		79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */; };
 		79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */; };
 		BFDB651D2BE38513006D4557 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */; };
@@ -46,6 +47,7 @@
 		019B5A792BE37C9B00809DB1 /* TaskAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
 		019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
+		79D86BF02BE512260098D5CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListItem.swift; sourceTree = "<group>"; };
 		BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				C284DEBE2BE20B6A0033FDB9 /* Project */,
 				019B5A802BE37DCD00809DB1 /* View */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
+				79D86BF02BE512260098D5CA /* GoogleService-Info.plist */,
 				EBE780412BE0E26C009270F6 /* Preview Content */,
 			);
 			path = KanbanDo;
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE780432BE0E26C009270F6 /* Preview Assets.xcassets in Resources */,
+				79D86BF12BE512260098D5CA /* GoogleService-Info.plist in Resources */,
 				EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
