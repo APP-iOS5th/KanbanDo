@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019B5A772BE37C7100809DB1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A762BE37C7100809DB1 /* Task.swift */; };
+		019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A792BE37C9B00809DB1 /* TaskAddView.swift */; };
+		019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */; };
+		04C822C32BE4B7F300B8852B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C22BE4B7F300B8852B /* FirebaseAuth */; };
+		04C822C52BE4B7F300B8852B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C42BE4B7F300B8852B /* FirebaseDatabase */; };
+		04C822C72BE4B7F300B8852B /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C62BE4B7F300B8852B /* FirebaseDatabaseSwift */; };
+		04C822CA2BE4B9BB00B8852B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C92BE4B9BB00B8852B /* FirebaseFirestore */; };
+		04C822CC2BE4B9BB00B8852B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822CB2BE4B9BB00B8852B /* FirebaseFirestoreSwift */; };
+		04C828152BE4B6E3002182BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04C828142BE4B6E3002182BD /* FirebaseAuth */; };
+		04C828172BE4B6E3002182BD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 04C828162BE4B6E3002182BD /* FirebaseDatabase */; };
+		04C828192BE4B6E3002182BD /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C828182BE4B6E3002182BD /* FirebaseDatabaseSwift */; };
+		04C8281B2BE4B6EE002182BD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 04C8281A2BE4B6EE002182BD /* GoogleSignIn */; };
+		04C8281D2BE4B6EE002182BD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C8281C2BE4B6EE002182BD /* GoogleSignInSwift */; };
+		7916585B2BE555E600007F3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7916585A2BE555E600007F3F /* GoogleService-Info.plist */; };
+		79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */; };
+		79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */; };
+		BFDB651D2BE38513006D4557 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */; };
+		C25EC8CC2BE9AA3C00CF906E /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EC8CA2BE9AA3C00CF906E /* TabComponent.swift */; };
+		C25EC8CE2BE9ACBA00CF906E /* TaskForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EC8CD2BE9ACBA00CF906E /* TaskForDetail.swift */; };
+		C25EC8D02BE9ACBF00CF906E /* DetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EC8CF2BE9ACBF00CF906E /* DetailPageView.swift */; };
+		C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */; };
+		C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A1B2BE132C100D6AEC2 /* Project.swift */; };
+		C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */; };
+		C26FED8D2BE478A600D74ADF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED892BE478A600D74ADF /* MainTabView.swift */; };
+		C26FED8E2BE478A600D74ADF /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED8A2BE478A600D74ADF /* MyPageView.swift */; };
+		C26FED8F2BE478A600D74ADF /* StatusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED8B2BE478A600D74ADF /* StatusTabView.swift */; };
+		C284DEBB2BE1FDA40033FDB9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */; };
+		C284DEC02BE21B330033FDB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBF2BE21B330033FDB9 /* User.swift */; };
+		C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */; };
+		C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC32BE27F800033FDB9 /* UserViewModel.swift */; };
+		C2F242502BE49E3A0094FFF7 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2424F2BE49E3A0094FFF7 /* TaskViewModel.swift */; };
+		C2F242522BE4A69F0094FFF7 /* SearchManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F242512BE4A69F0094FFF7 /* SearchManagerView.swift */; };
+		EB2690F52BE47F0600DC58E5 /* TaskForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */; };
+		EB2690F72BE47F3C00DC58E5 /* DetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2690F62BE47F3C00DC58E5 /* DetailPageView.swift */; };
 		EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */; };
 		EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7803D2BE0E26B009270F6 /* ContentView.swift */; };
 		EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE7803F2BE0E26C009270F6 /* Assets.xcassets */; };
@@ -14,6 +48,32 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019B5A762BE37C7100809DB1 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		019B5A792BE37C9B00809DB1 /* TaskAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
+		019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		7916585A2BE555E600007F3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
+		79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListItem.swift; sourceTree = "<group>"; };
+		BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		C2394C0C2BE31E560060058D /* KanbanDo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanDo.entitlements; sourceTree = "<group>"; };
+		C25EC8CA2BE9AA3C00CF906E /* TabComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
+		C25EC8CD2BE9ACBA00CF906E /* TaskForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskForDetail.swift; sourceTree = "<group>"; };
+		C25EC8CF2BE9ACBF00CF906E /* DetailPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageView.swift; sourceTree = "<group>"; };
+		C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
+		C2619A1B2BE132C100D6AEC2 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		C2619A262BE135DE00D6AEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C26FED892BE478A600D74ADF /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		C26FED8A2BE478A600D74ADF /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		C26FED8B2BE478A600D74ADF /* StatusTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTabView.swift; sourceTree = "<group>"; };
+		C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C284DEBF2BE21B330033FDB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
+		C284DEC32BE27F800033FDB9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		C2F2424F2BE49E3A0094FFF7 /* TaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		C2F242512BE4A69F0094FFF7 /* SearchManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManagerView.swift; sourceTree = "<group>"; };
+		EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskForDetail.swift; path = KanbanDo/TaskForDetail.swift; sourceTree = SOURCE_ROOT; };
+		EB2690F62BE47F3C00DC58E5 /* DetailPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPageView.swift; path = KanbanDo/DetailPageView.swift; sourceTree = SOURCE_ROOT; };
 		EBE780382BE0E26B009270F6 /* KanbanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanbanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanDoApp.swift; sourceTree = "<group>"; };
 		EBE7803D2BE0E26B009270F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +86,116 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C822C72BE4B7F300B8852B /* FirebaseDatabaseSwift in Frameworks */,
+				04C8281D2BE4B6EE002182BD /* GoogleSignInSwift in Frameworks */,
+				04C822C32BE4B7F300B8852B /* FirebaseAuth in Frameworks */,
+				04C828192BE4B6E3002182BD /* FirebaseDatabaseSwift in Frameworks */,
+				04C8281B2BE4B6EE002182BD /* GoogleSignIn in Frameworks */,
+				04C822CC2BE4B9BB00B8852B /* FirebaseFirestoreSwift in Frameworks */,
+				04C822CA2BE4B9BB00B8852B /* FirebaseFirestore in Frameworks */,
+				04C828172BE4B6E3002182BD /* FirebaseDatabase in Frameworks */,
+				04C822C52BE4B7F300B8852B /* FirebaseDatabase in Frameworks */,
+				04C828152BE4B6E3002182BD /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019B5A752BE37C2F00809DB1 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				C2F2424F2BE49E3A0094FFF7 /* TaskViewModel.swift */,
+				EB2690F62BE47F3C00DC58E5 /* DetailPageView.swift */,
+				EB2690F42BE47F0600DC58E5 /* TaskForDetail.swift */,
+				019B5A762BE37C7100809DB1 /* Task.swift */,
+				019B5A792BE37C9B00809DB1 /* TaskAddView.swift */,
+				019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */,
+				C2F242512BE4A69F0094FFF7 /* SearchManagerView.swift */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
+		019B5A802BE37DCD00809DB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C26FED8C2BE478A600D74ADF /* MainTabView */,
+				019B5A752BE37C2F00809DB1 /* TaskView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C822C82BE4B9BB00B8852B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79EB8F1B2BE3550F00CED2CC /* ProjectList */ = {
+			isa = PBXGroup;
+			children = (
+				79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */,
+				79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */,
+			);
+			path = ProjectList;
+			sourceTree = "<group>";
+		};
+		C25EC8CB2BE9AA3C00CF906E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C25EC8CA2BE9AA3C00CF906E /* TabComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C2619A162BE1210B00D6AEC2 /* CreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */,
+			);
+			path = CreateProject;
+			sourceTree = "<group>";
+		};
+		C26FED8C2BE478A600D74ADF /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				C26FED892BE478A600D74ADF /* MainTabView.swift */,
+				C26FED8A2BE478A600D74ADF /* MyPageView.swift */,
+				C26FED8B2BE478A600D74ADF /* StatusTabView.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		C284DEB52BE1FA2E0033FDB9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */,
+				C284DEBF2BE21B330033FDB9 /* User.swift */,
+				C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */,
+				C284DEC32BE27F800033FDB9 /* UserViewModel.swift */,
+				BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C284DEBE2BE20B6A0033FDB9 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				79EB8F1B2BE3550F00CED2CC /* ProjectList */,
+				C2619A162BE1210B00D6AEC2 /* CreateProject */,
+				C2619A1B2BE132C100D6AEC2 /* Project.swift */,
+				C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		EBE7802F2BE0E26B009270F6 = {
 			isa = PBXGroup;
 			children = (
 				EBE7803A2BE0E26B009270F6 /* KanbanDo */,
 				EBE780392BE0E26B009270F6 /* Products */,
+				04C822C82BE4B9BB00B8852B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +210,18 @@
 		EBE7803A2BE0E26B009270F6 /* KanbanDo */ = {
 			isa = PBXGroup;
 			children = (
+				C2394C0C2BE31E560060058D /* KanbanDo.entitlements */,
+				C2619A262BE135DE00D6AEC2 /* Info.plist */,
 				EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */,
 				EBE7803D2BE0E26B009270F6 /* ContentView.swift */,
+				C25EC8CD2BE9ACBA00CF906E /* TaskForDetail.swift */,
+				C25EC8CF2BE9ACBF00CF906E /* DetailPageView.swift */,
+				C25EC8CB2BE9AA3C00CF906E /* Components */,
+				C284DEB52BE1FA2E0033FDB9 /* Authentication */,
+				C284DEBE2BE20B6A0033FDB9 /* Project */,
+				019B5A802BE37DCD00809DB1 /* View */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
+				7916585A2BE555E600007F3F /* GoogleService-Info.plist */,
 				EBE780412BE0E26C009270F6 /* Preview Content */,
 			);
 			path = KanbanDo;
@@ -83,6 +251,18 @@
 			dependencies = (
 			);
 			name = KanbanDo;
+			packageProductDependencies = (
+				04C828142BE4B6E3002182BD /* FirebaseAuth */,
+				04C828162BE4B6E3002182BD /* FirebaseDatabase */,
+				04C828182BE4B6E3002182BD /* FirebaseDatabaseSwift */,
+				04C8281A2BE4B6EE002182BD /* GoogleSignIn */,
+				04C8281C2BE4B6EE002182BD /* GoogleSignInSwift */,
+				04C822C22BE4B7F300B8852B /* FirebaseAuth */,
+				04C822C42BE4B7F300B8852B /* FirebaseDatabase */,
+				04C822C62BE4B7F300B8852B /* FirebaseDatabaseSwift */,
+				04C822C92BE4B9BB00B8852B /* FirebaseFirestore */,
+				04C822CB2BE4B9BB00B8852B /* FirebaseFirestoreSwift */,
+			);
 			productName = KanbanDo;
 			productReference = EBE780382BE0E26B009270F6 /* KanbanDo.app */;
 			productType = "com.apple.product-type.application";
@@ -104,13 +284,18 @@
 			};
 			buildConfigurationList = EBE780332BE0E26B009270F6 /* Build configuration list for PBXProject "KanbanDo" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = EBE7802F2BE0E26B009270F6;
+			packageReferences = (
+				C2619A1F2BE1349200D6AEC2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C284DEB02BE1F9DA0033FDB9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = EBE780392BE0E26B009270F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE780432BE0E26C009270F6 /* Preview Assets.xcassets in Resources */,
+				7916585B2BE555E600007F3F /* GoogleService-Info.plist in Resources */,
 				EBE780402BE0E26C009270F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +323,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */,
+				C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */,
+				EB2690F52BE47F0600DC58E5 /* TaskForDetail.swift in Sources */,
+				C25EC8CE2BE9ACBA00CF906E /* TaskForDetail.swift in Sources */,
+				BFDB651D2BE38513006D4557 /* AuthenticationViewModel.swift in Sources */,
+				019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */,
+				C26FED8D2BE478A600D74ADF /* MainTabView.swift in Sources */,
+				C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */,
+				EB2690F72BE47F3C00DC58E5 /* DetailPageView.swift in Sources */,
+				C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */,
+				C25EC8D02BE9ACBF00CF906E /* DetailPageView.swift in Sources */,
+				C284DEBB2BE1FDA40033FDB9 /* LoginView.swift in Sources */,
+				C284DEC02BE21B330033FDB9 /* User.swift in Sources */,
 				EBE7803E2BE0E26B009270F6 /* ContentView.swift in Sources */,
+				C2F242502BE49E3A0094FFF7 /* TaskViewModel.swift in Sources */,
+				79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */,
+				79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */,
+				C2F242522BE4A69F0094FFF7 /* SearchManagerView.swift in Sources */,
+				C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */,
+				C26FED8F2BE478A600D74ADF /* StatusTabView.swift in Sources */,
 				EBE7803C2BE0E26B009270F6 /* KanbanDoApp.swift in Sources */,
+				019B5A772BE37C7100809DB1 /* Task.swift in Sources */,
+				C26FED8E2BE478A600D74ADF /* MyPageView.swift in Sources */,
+				C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */,
+				C25EC8CC2BE9AA3C00CF906E /* TabComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,11 +478,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KanbanDo/KanbanDo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KanbanDo/Preview Content\"";
+				DEVELOPMENT_TEAM = VUW56J5QC2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KanbanDo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -286,6 +499,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hwangseunghye.KanbanDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,11 +511,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KanbanDo/KanbanDo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KanbanDo/Preview Content\"";
+				DEVELOPMENT_TEAM = VUW56J5QC2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KanbanDo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,6 +532,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hwangseunghye.KanbanDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,6 +561,72 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2619A1F2BE1349200D6AEC2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+		C284DEB02BE1F9DA0033FDB9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04C822C22BE4B7F300B8852B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseAuth;
+		};
+		04C822C42BE4B7F300B8852B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseDatabase;
+		};
+		04C822C62BE4B7F300B8852B /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseDatabaseSwift;
+		};
+		04C822C92BE4B9BB00B8852B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2619A1F2BE1349200D6AEC2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		04C822CB2BE4B9BB00B8852B /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2619A1F2BE1349200D6AEC2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		04C828142BE4B6E3002182BD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseAuth;
+		};
+		04C828162BE4B6E3002182BD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseDatabase;
+		};
+		04C828182BE4B6E3002182BD /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseDatabaseSwift;
+		};
+		04C8281A2BE4B6EE002182BD /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C284DEB02BE1F9DA0033FDB9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		04C8281C2BE4B6EE002182BD /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C284DEB02BE1F9DA0033FDB9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBE780302BE0E26B009270F6 /* Project object */;
 }
