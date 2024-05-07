@@ -14,8 +14,8 @@ struct SearchUserView: View {
     var userViewModel = UserViewModel.shared
     
     @State var searchText = ""
-    @State var filteredUsers: [User] = []
-    @Binding var participants: [User]
+    @State var filteredUsers: [User] = [] // 검색된 유저들
+    @Binding var participants: [User] // 프로젝트에 팀원들을 추가할 배열
     @Environment(\.dismiss) var dismiss
     
     var body: some View {

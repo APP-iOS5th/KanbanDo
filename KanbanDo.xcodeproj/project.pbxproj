@@ -10,7 +10,6 @@
 		019B5A772BE37C7100809DB1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A762BE37C7100809DB1 /* Task.swift */; };
 		019B5A7B2BE37C9B00809DB1 /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A792BE37C9B00809DB1 /* TaskAddView.swift */; };
 		019B5A7F2BE37D3900809DB1 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */; };
-		0459B4DF2BE3F2AB00288A45 /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */; };
 		04C822C32BE4B7F300B8852B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C22BE4B7F300B8852B /* FirebaseAuth */; };
 		04C822C52BE4B7F300B8852B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C42BE4B7F300B8852B /* FirebaseDatabase */; };
 		04C822C72BE4B7F300B8852B /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C822C62BE4B7F300B8852B /* FirebaseDatabaseSwift */; };
@@ -25,15 +24,14 @@
 		79EB8F1D2BE3551D00CED2CC /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */; };
 		79EB8F1F2BE3561600CED2CC /* ProjectListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */; };
 		BFDB651D2BE38513006D4557 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */; };
+		C25EC8CC2BE9AA3C00CF906E /* TabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EC8CA2BE9AA3C00CF906E /* TabComponent.swift */; };
 		C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */; };
 		C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A1B2BE132C100D6AEC2 /* Project.swift */; };
 		C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */; };
 		C26FED8D2BE478A600D74ADF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED892BE478A600D74ADF /* MainTabView.swift */; };
 		C26FED8E2BE478A600D74ADF /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED8A2BE478A600D74ADF /* MyPageView.swift */; };
 		C26FED8F2BE478A600D74ADF /* StatusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED8B2BE478A600D74ADF /* StatusTabView.swift */; };
-		C26FED922BE478CA00D74ADF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26FED902BE478CA00D74ADF /* MockData.swift */; };
 		C284DEBB2BE1FDA40033FDB9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */; };
-		C284DEBD2BE205AC0033FDB9 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBC2BE205AC0033FDB9 /* TempView.swift */; };
 		C284DEC02BE21B330033FDB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEBF2BE21B330033FDB9 /* User.swift */; };
 		C284DEC22BE226EC0033FDB9 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */; };
 		C284DEC42BE27F800033FDB9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284DEC32BE27F800033FDB9 /* UserViewModel.swift */; };
@@ -51,12 +49,12 @@
 		019B5A762BE37C7100809DB1 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		019B5A792BE37C9B00809DB1 /* TaskAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
 		019B5A7E2BE37D3900809DB1 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
 		7916585A2BE555E600007F3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79EB8F1C2BE3551D00CED2CC /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListItem.swift; sourceTree = "<group>"; };
 		BFDB651C2BE38513006D4557 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		C2394C0C2BE31E560060058D /* KanbanDo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanDo.entitlements; sourceTree = "<group>"; };
+		C25EC8CA2BE9AA3C00CF906E /* TabComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabComponent.swift; sourceTree = "<group>"; };
 		C2619A172BE1224D00D6AEC2 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
 		C2619A1B2BE132C100D6AEC2 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
@@ -64,9 +62,7 @@
 		C26FED892BE478A600D74ADF /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C26FED8A2BE478A600D74ADF /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		C26FED8B2BE478A600D74ADF /* StatusTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTabView.swift; sourceTree = "<group>"; };
-		C26FED902BE478CA00D74ADF /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		C284DEBA2BE1FDA40033FDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		C284DEBC2BE205AC0033FDB9 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		C284DEBF2BE21B330033FDB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C284DEC12BE226EC0033FDB9 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		C284DEC32BE27F800033FDB9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -125,15 +121,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0459B4DD2BE3F2AB00288A45 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				0459B4DE2BE3F2AB00288A45 /* TabComponent.swift */,
-			);
-			name = Components;
-			path = CreateProject/Components;
-			sourceTree = "<group>";
-		};
 		04C822C82BE4B9BB00B8852B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +135,14 @@
 				79EB8F1E2BE3561600CED2CC /* ProjectListItem.swift */,
 			);
 			path = ProjectList;
+			sourceTree = "<group>";
+		};
+		C25EC8CB2BE9AA3C00CF906E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C25EC8CA2BE9AA3C00CF906E /* TabComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C2619A162BE1210B00D6AEC2 /* CreateProject */ = {
@@ -168,14 +163,6 @@
 			path = MainTabView;
 			sourceTree = "<group>";
 		};
-		C26FED912BE478CA00D74ADF /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				C26FED902BE478CA00D74ADF /* MockData.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		C284DEB52BE1FA2E0033FDB9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +178,8 @@
 		C284DEBE2BE20B6A0033FDB9 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				79EB8F1B2BE3550F00CED2CC /* ProjectList */,
+				C2619A162BE1210B00D6AEC2 /* CreateProject */,
 				C2619A1B2BE132C100D6AEC2 /* Project.swift */,
 				C2619A1D2BE133DD00D6AEC2 /* ProjectViewModel.swift */,
 			);
@@ -217,16 +206,12 @@
 		EBE7803A2BE0E26B009270F6 /* KanbanDo */ = {
 			isa = PBXGroup;
 			children = (
-				79EB8F1B2BE3550F00CED2CC /* ProjectList */,
 				C2394C0C2BE31E560060058D /* KanbanDo.entitlements */,
 				C2619A262BE135DE00D6AEC2 /* Info.plist */,
 				EBE7803B2BE0E26B009270F6 /* KanbanDoApp.swift */,
 				EBE7803D2BE0E26B009270F6 /* ContentView.swift */,
-				C284DEBC2BE205AC0033FDB9 /* TempView.swift */,
-				C26FED912BE478CA00D74ADF /* Mock */,
-				0459B4DD2BE3F2AB00288A45 /* Components */,
+				C25EC8CB2BE9AA3C00CF906E /* Components */,
 				C284DEB52BE1FA2E0033FDB9 /* Authentication */,
-				C2619A162BE1210B00D6AEC2 /* CreateProject */,
 				C284DEBE2BE20B6A0033FDB9 /* Project */,
 				019B5A802BE37DCD00809DB1 /* View */,
 				EBE7803F2BE0E26C009270F6 /* Assets.xcassets */,
@@ -340,7 +325,6 @@
 				C26FED8D2BE478A600D74ADF /* MainTabView.swift in Sources */,
 				C2619A1E2BE133DD00D6AEC2 /* ProjectViewModel.swift in Sources */,
 				EB2690F72BE47F3C00DC58E5 /* DetailPageView.swift in Sources */,
-				C284DEBD2BE205AC0033FDB9 /* TempView.swift in Sources */,
 				C2619A182BE1224D00D6AEC2 /* CreateProjectView.swift in Sources */,
 				C284DEBB2BE1FDA40033FDB9 /* LoginView.swift in Sources */,
 				C284DEC02BE21B330033FDB9 /* User.swift in Sources */,
@@ -355,8 +339,7 @@
 				019B5A772BE37C7100809DB1 /* Task.swift in Sources */,
 				C26FED8E2BE478A600D74ADF /* MyPageView.swift in Sources */,
 				C2619A1C2BE132C100D6AEC2 /* Project.swift in Sources */,
-				C26FED922BE478CA00D74ADF /* MockData.swift in Sources */,
-				0459B4DF2BE3F2AB00288A45 /* TabComponent.swift in Sources */,
+				C25EC8CC2BE9AA3C00CF906E /* TabComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

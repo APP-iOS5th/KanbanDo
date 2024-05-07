@@ -16,6 +16,7 @@ enum TaskStatus: String, Codable {
     case done
 }
 
+// FireStore에 저장할 Task Model. Task라는 이름이 구글 인증과 겹쳐서 ProjectTask로 변경
 struct ProjectTask: Identifiable, Codable, Hashable {
     
     var id: String
@@ -24,8 +25,8 @@ struct ProjectTask: Identifiable, Codable, Hashable {
     var closingDate: Date // 마감일
     var manager: User // 담당자
     var status: TaskStatus // 할 일 상태
-    var projectID: String
-    var timeStamp: Date
+    var projectID: String // 프로젝트에 속한 Task들만 필터링하기 위해 프로젝트 식별자 저장
+    var timeStamp: Date // 날짜순 정렬을 위해 timestamp 저장
     
     @Transient
     var createdClosingDateString: String {

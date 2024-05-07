@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+/**
+    담당자 검색 화면
+ */
 struct SearchManagerView: View {
     @State var searchText = ""
-    @State var filteredUsers: [User] = []
-    @State var participants: [User]
-    @Binding var manager: User?
+    @State var filteredUsers: [User] = [] // 검색된 유저들
+    @State var participants: [User] // 프로젝트 팀원들
+    @Binding var manager: User? // 선택한 담당자
     
     @Environment(\.dismiss) var dismiss
     

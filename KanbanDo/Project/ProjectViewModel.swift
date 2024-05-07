@@ -10,6 +10,12 @@ import FirebaseFirestore
 
 @Observable
 class ProjectViewModel {
+    
+    enum ProjectAddError: Error {
+        case missingParticipant
+        case addDocumentFailed
+    }
+    
     var projects: [Project]
     private let dbCollection = Firestore.firestore().collection("projects")
     private var listener: ListenerRegistration?
@@ -19,7 +25,7 @@ class ProjectViewModel {
         startRealtimeUpdates()
     }
     
-    // 프로젝트 리스트 보여주는 곳에서 수정해서 사용하시면 됩니당
+    // get snapshot
     func fetchProjects() {
         dbCollection.getDocuments { [self] querySnapshot, error in
             guard let snapshot = querySnapshot else {
@@ -31,14 +37,26 @@ class ProjectViewModel {
     }
     
     // 새 프로젝트 추가
-    func addProject(title: String, description: String, startDate: Date, endDate: Date, participants: [User]) {
+    func addProject(title: String, description: String, startDate: Date, endDate: Date, participants: [User], completion: @escaping (Result<Void, ProjectAddError>) -> Void) {
+        // 팀원을 한명도 추가하지 않은 경우
+        if participants.isEmpty {
+            completion(.failure(.missingParticipant))
+            return
+        }
+        
         let project = Project(id: UUID().uuidString, title: title, description: description,
                               startDate: startDate, endDate: endDate, participants: participants)
         
-        _ = try? dbCollection.addDocument(from: project)
+        _ = try? dbCollection.addDocument(from: project) { error in
+            if error != nil {
+                completion(.failure(.addDocumentFailed))
+            } else {
+                completion(.success(()))
+            }
+        }
     }
     
-    // 프로젝트 리스트 보여주는 곳에서 수정해서 사용하시면 됩니당
+    // project snapshot에서 데이터를 가져옴
     private func updateProjects(snapshot: QuerySnapshot) {
         guard let currentUser = Auth.auth().currentUser else { return }
         
@@ -51,6 +69,7 @@ class ProjectViewModel {
             }
         }
         
+        // 시작일 기준 최근순으로 정렬
         self.projects = projects.sorted {
             $0.startDate > $1.startDate
         }

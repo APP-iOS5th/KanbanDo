@@ -15,9 +15,10 @@ struct CreateProjectView: View {
     @State private var description: String = ""
     @State private var startDate: Date = Date()
     @State private var endDate: Date = Date()
-    @State private var calendarId: Int = 0
-    @State private var participants: [User] = []
-    @State private var isNewNotePresented = false
+    @State private var calendarId: Int = 0 // 캘린더 날짜 선택시 변경값을 주기 위해 사용하는 변수
+    @State private var participants: [User] = [] // 프로젝트에 추가할 팀원들을 담을 배열
+    @State private var isNewNotePresented = false // sheet를 열기 위해 사용하는 변수
+    @State private var showAlert = false
     
     @Environment(\.dismiss) var dismiss
     
@@ -30,7 +31,7 @@ struct CreateProjectView: View {
                     TextField("", text: $title)
                 }
                 Section("프로젝트 설명") {
-                    TextEditor(text: $description)
+                    TextField("", text: $description)
                         .frame(height: 100)
                 }
                 Section("기간") {
@@ -84,13 +85,22 @@ struct CreateProjectView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         projectViewModel?.addProject(title: title, description: description,
-                                                     startDate: startDate, endDate: endDate, participants: participants)
-                        dismiss()
+                                                     startDate: startDate, endDate: endDate, participants: participants) { result in
+                            switch result {
+                            case .success:
+                                dismiss()
+                            case .failure:
+                                showAlert = true
+                            }
+                        }
                     } label: {
                         Text("저장")
                             .font(.headline)
                     }
                     .disabled(title.isEmpty)
+                    .alert(isPresented: $showAlert) { // Use the showAlert flag as the binding
+                        Alert(title: Text("Error"), message: Text("팀원을 추가해주세요"), dismissButton: .default(Text("OK")))
+                    }
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     Button {

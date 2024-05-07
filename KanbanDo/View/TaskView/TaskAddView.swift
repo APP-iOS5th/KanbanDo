@@ -89,6 +89,7 @@ struct TaskAddView: View {
                             )
                         }
                         .sheet(isPresented: $isNewNotePresented) {
+                            // 프로젝트 팀원 중에서 담당자 선택을 하도록 이동
                             SearchManagerView(participants: project.participants, manager: $manager)
 //                            SearchUserView(participants: $participants)
                         }
@@ -114,9 +115,16 @@ struct TaskAddView: View {
                 
                 //todo: 위치/모양 바꾸기
                 Button {
+                    
                     taskViewModel.addTask(title: title, description: description, closingDate: closingDate,
-                                          manager: manager, status: status, projectID: project.id)
-                    dismiss()
+                                          manager: manager, status: status, projectID: project.id) { result in
+                        switch result {
+                        case .success:
+                            dismiss()
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
                     
                 } label: {
                     HStack {
