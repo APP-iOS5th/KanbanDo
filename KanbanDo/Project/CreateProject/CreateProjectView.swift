@@ -99,7 +99,7 @@ struct CreateProjectView: View {
                     }
                     .disabled(title.isEmpty)
                     .alert(isPresented: $showAlert) { // Use the showAlert flag as the binding
-                        Alert(title: Text("Error"), message: Text("팀원을 추가해주세요"), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(""), message: Text("팀원을 추가해주세요"))
                     }
                 }
                 ToolbarItem(placement: .topBarLeading) {

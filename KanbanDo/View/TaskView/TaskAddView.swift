@@ -19,6 +19,7 @@ struct TaskAddView: View {
     @State var status: TaskStatus =  .workDo
     @State var manager: User?
     @State var project: Project
+    @State private var showAlert = false
     
     //팀원 추가
     @State private var participants: [User] = []
@@ -121,8 +122,8 @@ struct TaskAddView: View {
                         switch result {
                         case .success:
                             dismiss()
-                        case .failure(let error):
-                            print(error)
+                        case .failure:
+                            showAlert = true
                         }
                     }
                     
@@ -135,6 +136,9 @@ struct TaskAddView: View {
                 .disabled(title.isEmpty)
                 .disabled(description.isEmpty)
                 .padding(.top, 30)
+                .alert(isPresented: $showAlert) { // Use the showAlert flag as the binding
+                    Alert(title: Text(""), message: Text("담당자를 추가해주세요"))
+                }
             }
             
         }
